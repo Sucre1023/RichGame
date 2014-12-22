@@ -7,6 +7,7 @@
 //
 
 #include "SplashScene.h"
+#include "MenuScene.h"
 #define FIRST_IMAGE   "first.png"
 #define SEC_IMAGE     "second.png"
 #define THI_IMAGE      "third.png"
@@ -126,7 +127,7 @@ void SplashScene::spriteFadeOut()
 void SplashScene::gotoMenuScene()
 {
 
-    
+    Director::getInstance()->pushScene(MenuScene::createScene());
     
 }
 

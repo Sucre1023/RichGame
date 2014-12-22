@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		18111AF41A46DA1D00617C99 /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18111AF21A46DA1D00617C99 /* SplashScene.cpp */; };
+		185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */; };
+		185DE5D11A47B36800EF7C5E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D01A47B36800EF7C5E /* background.png */; };
+		185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D51A47BAC500EF7C5E /* normal_menu.png */; };
+		185DE5D81A47BACE00EF7C5E /* press_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D71A47BACE00EF7C5E /* press_menu.png */; };
+		185DE5DC1A481F2200EF7C5E /* MapChooseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5DA1A481F2200EF7C5E /* MapChooseScene.cpp */; };
 		1862E2741A46E51F00E41623 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2701A46E51F00E41623 /* first.png */; };
 		1862E2751A46E51F00E41623 /* four.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2711A46E51F00E41623 /* four.png */; };
 		1862E2761A46E51F00E41623 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2721A46E51F00E41623 /* third.png */; };
@@ -222,6 +227,14 @@
 /* Begin PBXFileReference section */
 		18111AF21A46DA1D00617C99 /* SplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SplashScene.cpp; path = ../Classes/SplashScene.cpp; sourceTree = "<group>"; };
 		18111AF31A46DA1D00617C99 /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScene.h; path = ../Classes/SplashScene.h; sourceTree = "<group>"; };
+		185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene.cpp; sourceTree = "<group>"; };
+		185DE5C91A47AE7C00EF7C5E /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene.h; sourceTree = "<group>"; };
+		185DE5D01A47B36800EF7C5E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		185DE5D31A47B7EA00EF7C5E /* libextension.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libextension.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libextension.dylib; sourceTree = DEVELOPER_DIR; };
+		185DE5D51A47BAC500EF7C5E /* normal_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normal_menu.png; sourceTree = "<group>"; };
+		185DE5D71A47BACE00EF7C5E /* press_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press_menu.png; sourceTree = "<group>"; };
+		185DE5DA1A481F2200EF7C5E /* MapChooseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapChooseScene.cpp; path = ../Classes/MapChooseScene.cpp; sourceTree = "<group>"; };
+		185DE5DB1A481F2200EF7C5E /* MapChooseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapChooseScene.h; path = ../Classes/MapChooseScene.h; sourceTree = "<group>"; };
 		1862E2701A46E51F00E41623 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		1862E2711A46E51F00E41623 /* four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = four.png; sourceTree = "<group>"; };
 		1862E2721A46E51F00E41623 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
@@ -353,6 +366,10 @@
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				18111AF21A46DA1D00617C99 /* SplashScene.cpp */,
 				18111AF31A46DA1D00617C99 /* SplashScene.h */,
+				185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */,
+				185DE5C91A47AE7C00EF7C5E /* MenuScene.h */,
+				185DE5DA1A481F2200EF7C5E /* MapChooseScene.cpp */,
+				185DE5DB1A481F2200EF7C5E /* MapChooseScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -401,6 +418,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				185DE5D31A47B7EA00EF7C5E /* libextension.dylib */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
 				503AE11117EB99EE00D1A890 /* libcurl.dylib */,
@@ -468,6 +486,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				185DE5D71A47BACE00EF7C5E /* press_menu.png */,
+				185DE5D51A47BAC500EF7C5E /* normal_menu.png */,
+				185DE5D01A47B36800EF7C5E /* background.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
@@ -645,6 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				185DE5D11A47B36800EF7C5E /* background.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
@@ -657,6 +679,7 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				185DE5D81A47BACE00EF7C5E /* press_menu.png in Resources */,
 				1862E2771A46E51F00E41623 /* second.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -666,6 +689,7 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -688,12 +712,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185DE5DC1A481F2200EF7C5E /* MapChooseScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				18111AF41A46DA1D00617C99 /* SplashScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
