@@ -17,6 +17,13 @@
 		185DE5E61A48301300EF7C5E /* moon_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5E21A48301300EF7C5E /* moon_item.png */; };
 		185DE5E71A48301300EF7C5E /* sea_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5E31A48301300EF7C5E /* sea_item.png */; };
 		185DE5EC1A4832FD00EF7C5E /* stage_background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5EB1A4832FD00EF7C5E /* stage_background2.png */; };
+		185DE5F31A49441100EF7C5E /* GameBaseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5F11A49441100EF7C5E /* GameBaseScene.cpp */; };
+		185DE5F91A4945F500EF7C5E /* player1.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5F81A4945F500EF7C5E /* player1.png */; };
+		185DE5FB1A49460300EF7C5E /* player2.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5FA1A49460300EF7C5E /* player2.png */; };
+		185DE5FD1A494C3700EF7C5E /* right_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5FC1A494C3700EF7C5E /* right_banner.png */; };
+		185DE6001A49561E00EF7C5E /* SeaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5FE1A49561E00EF7C5E /* SeaScene.cpp */; };
+		185DE60D1A49641700EF7C5E /* sea.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE60B1A49641700EF7C5E /* sea.png */; };
+		185DE6101A496CDC00EF7C5E /* sea.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 185DE60F1A496CDC00EF7C5E /* sea.tmx */; };
 		1862E2741A46E51F00E41623 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2701A46E51F00E41623 /* first.png */; };
 		1862E2751A46E51F00E41623 /* four.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2711A46E51F00E41623 /* four.png */; };
 		1862E2761A46E51F00E41623 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2721A46E51F00E41623 /* third.png */; };
@@ -243,6 +250,15 @@
 		185DE5E21A48301300EF7C5E /* moon_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon_item.png; sourceTree = "<group>"; };
 		185DE5E31A48301300EF7C5E /* sea_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sea_item.png; sourceTree = "<group>"; };
 		185DE5EB1A4832FD00EF7C5E /* stage_background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stage_background2.png; sourceTree = "<group>"; };
+		185DE5F11A49441100EF7C5E /* GameBaseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameBaseScene.cpp; path = ../Classes/GameBaseScene.cpp; sourceTree = "<group>"; };
+		185DE5F21A49441100EF7C5E /* GameBaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameBaseScene.h; path = ../Classes/GameBaseScene.h; sourceTree = "<group>"; };
+		185DE5F81A4945F500EF7C5E /* player1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player1.png; path = ../proj.ios_mac/player1.png; sourceTree = "<group>"; };
+		185DE5FA1A49460300EF7C5E /* player2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2.png; sourceTree = "<group>"; };
+		185DE5FC1A494C3700EF7C5E /* right_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_banner.png; sourceTree = "<group>"; };
+		185DE5FE1A49561E00EF7C5E /* SeaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SeaScene.cpp; path = ../Classes/SeaScene.cpp; sourceTree = "<group>"; };
+		185DE5FF1A49561E00EF7C5E /* SeaScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeaScene.h; path = ../Classes/SeaScene.h; sourceTree = "<group>"; };
+		185DE60B1A49641700EF7C5E /* sea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sea.png; sourceTree = "<group>"; };
+		185DE60F1A496CDC00EF7C5E /* sea.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sea.tmx; sourceTree = "<group>"; };
 		1862E2701A46E51F00E41623 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		1862E2711A46E51F00E41623 /* four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = four.png; sourceTree = "<group>"; };
 		1862E2721A46E51F00E41623 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
@@ -378,6 +394,10 @@
 				185DE5C91A47AE7C00EF7C5E /* MenuScene.h */,
 				185DE5DA1A481F2200EF7C5E /* MapChooseScene.cpp */,
 				185DE5DB1A481F2200EF7C5E /* MapChooseScene.h */,
+				185DE5F11A49441100EF7C5E /* GameBaseScene.cpp */,
+				185DE5F21A49441100EF7C5E /* GameBaseScene.h */,
+				185DE5FE1A49561E00EF7C5E /* SeaScene.cpp */,
+				185DE5FF1A49561E00EF7C5E /* SeaScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -494,6 +514,11 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				185DE60F1A496CDC00EF7C5E /* sea.tmx */,
+				185DE60B1A49641700EF7C5E /* sea.png */,
+				185DE5FC1A494C3700EF7C5E /* right_banner.png */,
+				185DE5F81A4945F500EF7C5E /* player1.png */,
+				185DE5FA1A49460300EF7C5E /* player2.png */,
 				185DE5EB1A4832FD00EF7C5E /* stage_background2.png */,
 				185DE5E11A48301300EF7C5E /* beach_item.png */,
 				185DE5E21A48301300EF7C5E /* moon_item.png */,
@@ -688,10 +713,13 @@
 				185DE5E61A48301300EF7C5E /* moon_item.png in Resources */,
 				1862E2761A46E51F00E41623 /* third.png in Resources */,
 				1862E2751A46E51F00E41623 /* four.png in Resources */,
+				185DE60D1A49641700EF7C5E /* sea.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				185DE5FD1A494C3700EF7C5E /* right_banner.png in Resources */,
+				185DE5FB1A49460300EF7C5E /* player2.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				185DE5D81A47BACE00EF7C5E /* press_menu.png in Resources */,
@@ -704,6 +732,8 @@
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
+				185DE5F91A4945F500EF7C5E /* player1.png in Resources */,
+				185DE6101A496CDC00EF7C5E /* sea.tmx in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
@@ -732,10 +762,12 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				18111AF41A46DA1D00617C99 /* SplashScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				185DE6001A49561E00EF7C5E /* SeaScene.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */,
+				185DE5F31A49441100EF7C5E /* GameBaseScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

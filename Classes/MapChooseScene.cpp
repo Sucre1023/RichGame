@@ -7,7 +7,7 @@
 //
 
 #include "MapChooseScene.h"
-
+#include "SeaScene.h"
 Scene *MapChooseScene::createScene()
 {
     auto scene =Scene::create();
@@ -88,6 +88,12 @@ void MapChooseScene::onTouchEnded(Touch *touch, Event *event)
     if (fabs(distance) > 50 ) {
     
         adjustscrollview(distance);
+    }else{
+        if (currentpage ==2) {
+            auto scene =TransitionFade::create(2, SeaScene::createScene());
+            Director::getInstance()->pushScene(scene);
+        }
+    
     }
 
 }
