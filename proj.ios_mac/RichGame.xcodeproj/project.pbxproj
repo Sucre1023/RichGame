@@ -13,6 +13,10 @@
 		185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D51A47BAC500EF7C5E /* normal_menu.png */; };
 		185DE5D81A47BACE00EF7C5E /* press_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D71A47BACE00EF7C5E /* press_menu.png */; };
 		185DE5DC1A481F2200EF7C5E /* MapChooseScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5DA1A481F2200EF7C5E /* MapChooseScene.cpp */; };
+		185DE5E51A48301300EF7C5E /* beach_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5E11A48301300EF7C5E /* beach_item.png */; };
+		185DE5E61A48301300EF7C5E /* moon_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5E21A48301300EF7C5E /* moon_item.png */; };
+		185DE5E71A48301300EF7C5E /* sea_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5E31A48301300EF7C5E /* sea_item.png */; };
+		185DE5EC1A4832FD00EF7C5E /* stage_background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5EB1A4832FD00EF7C5E /* stage_background2.png */; };
 		1862E2741A46E51F00E41623 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2701A46E51F00E41623 /* first.png */; };
 		1862E2751A46E51F00E41623 /* four.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2711A46E51F00E41623 /* four.png */; };
 		1862E2761A46E51F00E41623 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2721A46E51F00E41623 /* third.png */; };
@@ -235,6 +239,10 @@
 		185DE5D71A47BACE00EF7C5E /* press_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press_menu.png; sourceTree = "<group>"; };
 		185DE5DA1A481F2200EF7C5E /* MapChooseScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapChooseScene.cpp; path = ../Classes/MapChooseScene.cpp; sourceTree = "<group>"; };
 		185DE5DB1A481F2200EF7C5E /* MapChooseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapChooseScene.h; path = ../Classes/MapChooseScene.h; sourceTree = "<group>"; };
+		185DE5E11A48301300EF7C5E /* beach_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beach_item.png; sourceTree = "<group>"; };
+		185DE5E21A48301300EF7C5E /* moon_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon_item.png; sourceTree = "<group>"; };
+		185DE5E31A48301300EF7C5E /* sea_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sea_item.png; sourceTree = "<group>"; };
+		185DE5EB1A4832FD00EF7C5E /* stage_background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stage_background2.png; sourceTree = "<group>"; };
 		1862E2701A46E51F00E41623 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		1862E2711A46E51F00E41623 /* four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = four.png; sourceTree = "<group>"; };
 		1862E2721A46E51F00E41623 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
@@ -486,6 +494,10 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				185DE5EB1A4832FD00EF7C5E /* stage_background2.png */,
+				185DE5E11A48301300EF7C5E /* beach_item.png */,
+				185DE5E21A48301300EF7C5E /* moon_item.png */,
+				185DE5E31A48301300EF7C5E /* sea_item.png */,
 				185DE5D71A47BACE00EF7C5E /* press_menu.png */,
 				185DE5D51A47BAC500EF7C5E /* normal_menu.png */,
 				185DE5D01A47B36800EF7C5E /* background.png */,
@@ -665,12 +677,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185DE5E51A48301300EF7C5E /* beach_item.png in Resources */,
+				185DE5E71A48301300EF7C5E /* sea_item.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				185DE5D11A47B36800EF7C5E /* background.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1862E2741A46E51F00E41623 /* first.png in Resources */,
+				185DE5E61A48301300EF7C5E /* moon_item.png in Resources */,
 				1862E2761A46E51F00E41623 /* third.png in Resources */,
 				1862E2751A46E51F00E41623 /* four.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
@@ -683,6 +698,7 @@
 				1862E2771A46E51F00E41623 /* second.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
+				185DE5EC1A4832FD00EF7C5E /* stage_background2.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,

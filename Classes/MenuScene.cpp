@@ -7,17 +7,7 @@
 //
 
 #include "MenuScene.h"
-#define NORMAL_MENU   "normal_menu.png"
-#define PRESS_MENU    "press_menu.png"
-#define FONT_MENU     "Marker Felt"
-#define SINGLE_GAME   "Single Game"
-#define MULTI_GAME    "Multi Game"
-#define MUSIC_ON      "Music On"
-#define MUSIC_OFF     "Music Off"
-#define QUIT_GAME     "Quit Game"
-#define MUSIC_ON_KEY  "music_on"
-#define OK "Ok"
-#define CANCEL "Cancel"
+#include "MapChooseScene.h"
 Scene *MenuScene::createScene()
 {
     auto scene =Scene::create();
@@ -103,6 +93,7 @@ void MenuScene::menuTouchDown(Ref *pSender, Control::EventType event)
     switch (tag) {
         case 10001:
         {
+            Director::getInstance()->pushScene(MapChooseScene::createScene());
             break;
         }
         case 10002:
