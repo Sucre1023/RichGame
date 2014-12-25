@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		18111AF41A46DA1D00617C99 /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18111AF21A46DA1D00617C99 /* SplashScene.cpp */; };
+		183B7C1A1A4BF5CB006D63A6 /* player1_anim.png in Resources */ = {isa = PBXBuildFile; fileRef = 183B7C161A4BF5CB006D63A6 /* player1_anim.png */; };
+		183B7C1B1A4BF5CB006D63A6 /* player2_anim.png in Resources */ = {isa = PBXBuildFile; fileRef = 183B7C171A4BF5CB006D63A6 /* player2_anim.png */; };
+		183B7C1C1A4BF5CB006D63A6 /* player1_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B7C181A4BF5CB006D63A6 /* player1_anim.plist */; };
+		183B7C1D1A4BF5CB006D63A6 /* player2_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B7C191A4BF5CB006D63A6 /* player2_anim.plist */; };
+		183B7C221A4C1E83006D63A6 /* RicherPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183B7C201A4C1E83006D63A6 /* RicherPlayer.cpp */; };
 		185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */; };
 		185DE5D11A47B36800EF7C5E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D01A47B36800EF7C5E /* background.png */; };
 		185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D51A47BAC500EF7C5E /* normal_menu.png */; };
@@ -22,12 +27,14 @@
 		185DE5FB1A49460300EF7C5E /* player2.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5FA1A49460300EF7C5E /* player2.png */; };
 		185DE5FD1A494C3700EF7C5E /* right_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5FC1A494C3700EF7C5E /* right_banner.png */; };
 		185DE6001A49561E00EF7C5E /* SeaScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5FE1A49561E00EF7C5E /* SeaScene.cpp */; };
-		185DE60D1A49641700EF7C5E /* sea.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE60B1A49641700EF7C5E /* sea.png */; };
-		185DE6101A496CDC00EF7C5E /* sea.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 185DE60F1A496CDC00EF7C5E /* sea.tmx */; };
 		1862E2741A46E51F00E41623 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2701A46E51F00E41623 /* first.png */; };
 		1862E2751A46E51F00E41623 /* four.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2711A46E51F00E41623 /* four.png */; };
 		1862E2761A46E51F00E41623 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2721A46E51F00E41623 /* third.png */; };
 		1862E2771A46E51F00E41623 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 1862E2731A46E51F00E41623 /* second.png */; };
+		18A0E61E1A4A65300055F7A0 /* finalsea.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61B1A4A65300055F7A0 /* finalsea.tmx */; };
+		18A0E61F1A4A65300055F7A0 /* sea 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61C1A4A65300055F7A0 /* sea 2.png */; };
+		18A0E6201A4A65300055F7A0 /* way.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61D1A4A65300055F7A0 /* way.png */; };
+		18CCB1B91A4BB7BA00822BB7 /* go1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CCB1B81A4BB7BA00822BB7 /* go1.png */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
 		1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFD180E9839004C840B /* libchipmunk Mac.a */; };
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
@@ -238,6 +245,12 @@
 /* Begin PBXFileReference section */
 		18111AF21A46DA1D00617C99 /* SplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SplashScene.cpp; path = ../Classes/SplashScene.cpp; sourceTree = "<group>"; };
 		18111AF31A46DA1D00617C99 /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashScene.h; path = ../Classes/SplashScene.h; sourceTree = "<group>"; };
+		183B7C161A4BF5CB006D63A6 /* player1_anim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player1_anim.png; sourceTree = "<group>"; };
+		183B7C171A4BF5CB006D63A6 /* player2_anim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player2_anim.png; sourceTree = "<group>"; };
+		183B7C181A4BF5CB006D63A6 /* player1_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = player1_anim.plist; sourceTree = "<group>"; };
+		183B7C191A4BF5CB006D63A6 /* player2_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = player2_anim.plist; sourceTree = "<group>"; };
+		183B7C201A4C1E83006D63A6 /* RicherPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RicherPlayer.cpp; path = ../Classes/RicherPlayer.cpp; sourceTree = "<group>"; };
+		183B7C211A4C1E83006D63A6 /* RicherPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RicherPlayer.h; path = ../Classes/RicherPlayer.h; sourceTree = "<group>"; };
 		185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene.cpp; sourceTree = "<group>"; };
 		185DE5C91A47AE7C00EF7C5E /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene.h; sourceTree = "<group>"; };
 		185DE5D01A47B36800EF7C5E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -257,12 +270,14 @@
 		185DE5FC1A494C3700EF7C5E /* right_banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_banner.png; sourceTree = "<group>"; };
 		185DE5FE1A49561E00EF7C5E /* SeaScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SeaScene.cpp; path = ../Classes/SeaScene.cpp; sourceTree = "<group>"; };
 		185DE5FF1A49561E00EF7C5E /* SeaScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeaScene.h; path = ../Classes/SeaScene.h; sourceTree = "<group>"; };
-		185DE60B1A49641700EF7C5E /* sea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sea.png; sourceTree = "<group>"; };
-		185DE60F1A496CDC00EF7C5E /* sea.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sea.tmx; sourceTree = "<group>"; };
 		1862E2701A46E51F00E41623 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		1862E2711A46E51F00E41623 /* four.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = four.png; sourceTree = "<group>"; };
 		1862E2721A46E51F00E41623 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		1862E2731A46E51F00E41623 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		18A0E61B1A4A65300055F7A0 /* finalsea.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = finalsea.tmx; sourceTree = "<group>"; };
+		18A0E61C1A4A65300055F7A0 /* sea 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sea 2.png"; sourceTree = "<group>"; };
+		18A0E61D1A4A65300055F7A0 /* way.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = way.png; sourceTree = "<group>"; };
+		18CCB1B81A4BB7BA00822BB7 /* go1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go1.png; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
@@ -398,6 +413,8 @@
 				185DE5F21A49441100EF7C5E /* GameBaseScene.h */,
 				185DE5FE1A49561E00EF7C5E /* SeaScene.cpp */,
 				185DE5FF1A49561E00EF7C5E /* SeaScene.h */,
+				183B7C201A4C1E83006D63A6 /* RicherPlayer.cpp */,
+				183B7C211A4C1E83006D63A6 /* RicherPlayer.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -514,8 +531,14 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				185DE60F1A496CDC00EF7C5E /* sea.tmx */,
-				185DE60B1A49641700EF7C5E /* sea.png */,
+				183B7C161A4BF5CB006D63A6 /* player1_anim.png */,
+				183B7C171A4BF5CB006D63A6 /* player2_anim.png */,
+				183B7C181A4BF5CB006D63A6 /* player1_anim.plist */,
+				183B7C191A4BF5CB006D63A6 /* player2_anim.plist */,
+				18CCB1B81A4BB7BA00822BB7 /* go1.png */,
+				18A0E61B1A4A65300055F7A0 /* finalsea.tmx */,
+				18A0E61C1A4A65300055F7A0 /* sea 2.png */,
+				18A0E61D1A4A65300055F7A0 /* way.png */,
 				185DE5FC1A494C3700EF7C5E /* right_banner.png */,
 				185DE5F81A4945F500EF7C5E /* player1.png */,
 				185DE5FA1A49460300EF7C5E /* player2.png */,
@@ -704,16 +727,21 @@
 			files = (
 				185DE5E51A48301300EF7C5E /* beach_item.png in Resources */,
 				185DE5E71A48301300EF7C5E /* sea_item.png in Resources */,
+				183B7C1D1A4BF5CB006D63A6 /* player2_anim.plist in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				18A0E6201A4A65300055F7A0 /* way.png in Resources */,
 				185DE5D11A47B36800EF7C5E /* background.png in Resources */,
+				18CCB1B91A4BB7BA00822BB7 /* go1.png in Resources */,
+				183B7C1C1A4BF5CB006D63A6 /* player1_anim.plist in Resources */,
+				18A0E61E1A4A65300055F7A0 /* finalsea.tmx in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1862E2741A46E51F00E41623 /* first.png in Resources */,
+				183B7C1A1A4BF5CB006D63A6 /* player1_anim.png in Resources */,
 				185DE5E61A48301300EF7C5E /* moon_item.png in Resources */,
 				1862E2761A46E51F00E41623 /* third.png in Resources */,
 				1862E2751A46E51F00E41623 /* four.png in Resources */,
-				185DE60D1A49641700EF7C5E /* sea.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
@@ -724,6 +752,7 @@
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				185DE5D81A47BACE00EF7C5E /* press_menu.png in Resources */,
 				1862E2771A46E51F00E41623 /* second.png in Resources */,
+				183B7C1B1A4BF5CB006D63A6 /* player2_anim.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				185DE5EC1A4832FD00EF7C5E /* stage_background2.png in Resources */,
@@ -733,10 +762,10 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				185DE5F91A4945F500EF7C5E /* player1.png in Resources */,
-				185DE6101A496CDC00EF7C5E /* sea.tmx in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				18A0E61F1A4A65300055F7A0 /* sea 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,6 +796,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */,
+				183B7C221A4C1E83006D63A6 /* RicherPlayer.cpp in Sources */,
 				185DE5F31A49441100EF7C5E /* GameBaseScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
