@@ -34,6 +34,7 @@
 		18A0E61F1A4A65300055F7A0 /* sea 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61C1A4A65300055F7A0 /* sea 2.png */; };
 		18A0E6201A4A65300055F7A0 /* way.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61D1A4A65300055F7A0 /* way.png */; };
 		18AE16B81A4D7AE10062CD78 /* haidi2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18AE16B71A4D7AE10062CD78 /* haidi2.tmx */; };
+		18AE16BC1A4E48200062CD78 /* PlayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18AE16BA1A4E48200062CD78 /* PlayerController.cpp */; };
 		18CCB1B91A4BB7BA00822BB7 /* go1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CCB1B81A4BB7BA00822BB7 /* go1.png */; };
 		18DF5E7A1A4D088C008C2C4A /* GetWalkPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18DF5E781A4D088C008C2C4A /* GetWalkPath.cpp */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
@@ -278,6 +279,8 @@
 		18A0E61C1A4A65300055F7A0 /* sea 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sea 2.png"; sourceTree = "<group>"; };
 		18A0E61D1A4A65300055F7A0 /* way.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = way.png; sourceTree = "<group>"; };
 		18AE16B71A4D7AE10062CD78 /* haidi2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haidi2.tmx; sourceTree = "<group>"; };
+		18AE16BA1A4E48200062CD78 /* PlayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerController.cpp; path = ../Classes/PlayerController.cpp; sourceTree = "<group>"; };
+		18AE16BB1A4E48200062CD78 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerController.h; path = ../Classes/PlayerController.h; sourceTree = "<group>"; };
 		18CCB1B81A4BB7BA00822BB7 /* go1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go1.png; sourceTree = "<group>"; };
 		18DF5E781A4D088C008C2C4A /* GetWalkPath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GetWalkPath.cpp; path = ../Classes/GetWalkPath.cpp; sourceTree = "<group>"; };
 		18DF5E791A4D088C008C2C4A /* GetWalkPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GetWalkPath.h; path = ../Classes/GetWalkPath.h; sourceTree = "<group>"; };
@@ -420,6 +423,8 @@
 				183B7C211A4C1E83006D63A6 /* RicherPlayer.h */,
 				18DF5E781A4D088C008C2C4A /* GetWalkPath.cpp */,
 				18DF5E791A4D088C008C2C4A /* GetWalkPath.h */,
+				18AE16BA1A4E48200062CD78 /* PlayerController.cpp */,
+				18AE16BB1A4E48200062CD78 /* PlayerController.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -802,6 +807,7 @@
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				18DF5E7A1A4D088C008C2C4A /* GetWalkPath.cpp in Sources */,
 				185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */,
+				18AE16BC1A4E48200062CD78 /* PlayerController.cpp in Sources */,
 				183B7C221A4C1E83006D63A6 /* RicherPlayer.cpp in Sources */,
 				185DE5F31A49441100EF7C5E /* GameBaseScene.cpp in Sources */,
 			);
