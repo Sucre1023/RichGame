@@ -51,6 +51,10 @@ private:
     //void drawTable(int playnumber);//根据人数绘画右边信息栏的表格
     void addPlayer();//添加人物
     Sprite *rightbanner;
+    Sprite *player_1;
+    Sprite *player_2;
+    void addbutton();
+    void buttonpressd(Ref *p);
 
 };
 #endif /* defined(__RichGame__GameBaseScene__) */

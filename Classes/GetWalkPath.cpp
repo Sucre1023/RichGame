@@ -49,10 +49,14 @@ void GetWalkPath::getpath(cocos2d::Sprite *playerSprite, int stepsCount, bool **
     
     std::vector<bool> direction_4;//当前位置的4个方向的位置是否可以走
     std::vector<int>  canwalk_direction;//4个方向可以走的位置
-    //赋值canpassgrid
+    //复制canpassgrid
     bool** canpassgrid_copy =new bool *[HangInGrid];
-    for (int hang; hang<HangInGrid; hang++) {
-        for (int lie; lie <LieInGrid; lie++) {
+    for (int i=0; i<HangInGrid; i++)
+    {
+        canpassgrid_copy[i] =new bool[LieInGrid];
+    }
+    for (int hang =0; hang<HangInGrid; hang++) {
+        for (int lie =0; lie<LieInGrid; lie++) {
             canpassgrid_copy[hang][lie] =canpassgrid[hang][lie];
         }
     }
@@ -70,25 +74,27 @@ void GetWalkPath::getpath(cocos2d::Sprite *playerSprite, int stepsCount, bool **
         
         }
         //分别判断四个方向
-        direction_4[Up] =iscanwalk_direction_4(currentHang, currentLie, Up, canpassgrid);
-        direction_4[Down] =iscanwalk_direction_4(currentHang, currentLie, Down, canpassgrid);
-        direction_4[Left] =iscanwalk_direction_4(currentHang, currentLie, Left, canpassgrid);
-        direction_4[Right] =iscanwalk_direction_4(currentHang, currentLie, Right, canpassgrid);
+        direction_4[Up] =iscanwalk_direction_4(currentHang, currentLie, Up, canpassgrid_copy);
+        direction_4[Down] =iscanwalk_direction_4(currentHang, currentLie, Down, canpassgrid_copy);
+        direction_4[Left] =iscanwalk_direction_4(currentHang, currentLie, Left, canpassgrid_copy);
+        direction_4[Right] =iscanwalk_direction_4(currentHang, currentLie, Right, canpassgrid_copy);
         //存入可以行走的方向
-        for (int i=0; i<4; i++) {
-            if (direction_4[i]) {
+        for (int i=0; i<4; i++)
+        {
+            if (direction_4[i])
+            {
                 canwalk_direction.push_back(i);
             }
         }
         //在可以行走的方向随机选一个,赋值下一步的行列数
         int rand_direction =rand()%canwalk_direction.size();
-        switch (rand_direction) {
+        switch (canwalk_direction[rand_direction]) {
             case Up:
-                nextHang =currentHang -1;
+                nextHang =currentHang +1;
                 nextLie =currentLie;
                 break;
             case Down:
-                nextHang =currentHang +1;
+                nextHang =currentHang -1;
                 nextLie =currentLie;
                 break;
             case Left:
@@ -131,17 +137,17 @@ bool GetWalkPath::iscanwalk_direction_4(int hang, int lie, int direction, bool *
     switch (direction)
     {
         case Up:{
-            return canpassgrid[hang-1][lie];
-            break;}
+            return canpassgrid[hang +1][lie];
+            }
         case Down:{
-            return canpassgrid[hang+1][lie];
-            break;}
+            return canpassgrid[hang -1][lie];
+            }
         case Left:{
             return canpassgrid[hang][lie-1];
-            break;}
+           }
         case Right:{
             return canpassgrid[hang][lie+1];
-            break;}
+           }
      
     }
     return false;

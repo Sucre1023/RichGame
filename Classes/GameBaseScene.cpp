@@ -7,6 +7,7 @@
 //
 
 #include "GameBaseScene.h"
+#include "GetWalkPath.h"
 Scene *GameBaseScene::createScene()
 {
     auto scene =Scene::create();
@@ -32,17 +33,17 @@ bool GameBaseScene::init()
      setWayPass();
     addPlayerAnimation();
     addPlayer();
+    addbutton();
     
    
  
     return true;
 }
-
 void GameBaseScene::addPlayer()
 {
     
     //人物1 右侧信息栏
-    Sprite *player_1 =Sprite::create("player1.png");
+    player_1 =Sprite::create("player1.png");
     player_1->cocos2d::Node::setPosition(visibleSie.width-120,visibleSie.height-70);
     addChild(player_1);
     
@@ -57,7 +58,7 @@ void GameBaseScene::addPlayer()
     player_1_strength->setPosition(visibleSie.width-90,visibleSie.height-90);
     addChild(player_1_strength);
    //
-    Sprite *player_2 =Sprite::create("player2.png");
+  player_2 =Sprite::create("player2.png");
     player_2->cocos2d::Node::setPosition(visibleSie.width-120,visibleSie.height-300);
     addChild(player_2);
     
@@ -71,11 +72,6 @@ void GameBaseScene::addPlayer()
     player_2_strength->setSystemFontSize(25);
     player_2_strength->setPosition(visibleSie.width-90,visibleSie.height-330);
     addChild(player_2_strength);
-    
-    //
-    Sprite *Gobtn =Sprite::create("go1.png");
-    Gobtn->setPosition(visibleSie.width-90,visibleSie.height/5);
-    addChild(Gobtn);
     
     //随机种子
     struct timeval now;
@@ -133,6 +129,32 @@ void GameBaseScene::setWayPass()
     
 
 }
+void GameBaseScene::addbutton()
+{
+    
+    //    Sprite *Gobtn =Sprite::create("go1.png");
+    //    Gobtn->setPosition(visibleSie.width-90,visibleSie.height/5);
+    //    addChild(Gobtn);
+    Menu *menu =Menu::create();
+    menu->setPosition(Point::ZERO);
+    MenuItemImage *gobtnmenu =MenuItemImage::create("go1.png","go1.png",this,menu_selector(GameBaseScene::buttonpressd));
+    gobtnmenu->setPosition(visibleSie.width-90,visibleSie.height/5);
+    menu->addChild(gobtnmenu);
+    addChild(menu);
+    
+}
+void GameBaseScene::buttonpressd(cocos2d::Ref *p)
+{
+    
+    GetWalkPath::getInstance()->getpath(playerone, 5, Shuzu, 20, 29);
+    std::vector<int> hangvector =GetWalkPath::getInstance()->getpathhang_vector();
+    std::vector<int> lievector =GetWalkPath::getInstance()->getpahtlie_vector();
+    for (int i=0; i<5; i++) {
+        log("走到了第%d行,第%d列",hangvector[i],lievector[i]);
+    }
+
+}
+
 void GameBaseScene::addPlayerAnimation()
 {
 //加载Player1
