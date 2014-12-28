@@ -31,6 +31,7 @@ private:
     MoveBy *moveby;
     Repeat *repeat;
     CallFunc *callend;
+    
     std::vector<int> _hangvector;
     std::vector<int>_lievector;
     RicherPlayer *_player;

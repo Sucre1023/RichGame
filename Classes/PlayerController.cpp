@@ -33,25 +33,9 @@ PlayerController::~PlayerController()
     Walk->release();
 
 }
-
-void PlayerController::startwalk(std::vector<int> hangvector, std::vector<int> lievector, RicherPlayer *player)
-{
-    //初始化行列
-    currenthang =hangvector[0];
-    currentlie =lievector[0];
-    nexthang =0;nextlie=0;
-    
-    _hangvector =hangvector;
-    _lievector =lievector;
-    _player =player;
-    isAnimFinished =false;
-    stepshasgone =0;
-    stepscount =(int) _hangvector.size()-1;//减去当前的位置
-    walkonestep(player);
-}
 void PlayerController::walkonestep(RicherPlayer *player)
 {
-//获取下一步的位置
+    //获取下一步的位置
     nexthang =_hangvector[stepshasgone +1];
     nextlie =_lievector[stepshasgone +1];
     //两步之间的 行和列 的差，用来判断方向
@@ -82,10 +66,26 @@ void PlayerController::walkonestep(RicherPlayer *player)
     Walk->retain();
     player->runAction(Walk);
 }
+
+void PlayerController::startwalk(std::vector<int> hangVector, std::vector<int> lieVector, RicherPlayer *player)
+{
+    //初始化行列
+    currenthang =hangVector[0];
+    currentlie =lieVector[0];
+    nexthang =0;nextlie=0;
+    
+    _hangvector =hangVector;
+    _lievector =lieVector;
+    _player =player;
+    isAnimFinished =false;
+    stepshasgone =0;
+    stepscount = _hangvector.size()-1;//减去当前的位置
+    walkonestep(player);
+}
 void PlayerController::endwalk()
 {
     stepshasgone++;
-    if (stepshasgone>=stepscount) {
+    if (stepshasgone >= stepscount) {
         return;
     }
     currenthang =nexthang;

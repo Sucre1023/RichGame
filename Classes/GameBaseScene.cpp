@@ -143,16 +143,22 @@ void GameBaseScene::addbutton()
 }
 void GameBaseScene::buttonpressd(cocos2d::Ref *p)
 {
-    
-   GetWalkPath::getInstance()->getpath(playerone, 5, Shuzu, 20, 29);
-    std::vector<int> hangvector =GetWalkPath::getInstance()->getpathhang_vector();
-    std::vector<int> lievector =GetWalkPath::getInstance()->getpahtlie_vector();
-//    for (int i=0; i<5; i++) {
-//        log("走到了第%d行,第%d列",hangvector[i],lievector[i]);
-//    }
+//    
+   GetWalkPath::getInstance()->getpath(playerone, 5, Shuzu, Hang, Lie);
+    std::vector<int> hangvector =GetWalkPath::getInstance()->getPathhang_vector();
+    std::vector<int> lievector =GetWalkPath::getInstance()->getPathlie_vector();
+    for (int i=0; i<hangvector.size(); i++) {
+        log("走到了第%d行,第%d列",hangvector[i],lievector[i]);
+    }
+//    log("%d",hangvector.size());
     playerone->startgo(hangvector, lievector);
 
 }
+void GameBaseScene::onExit()
+{
+    CC_SAFE_DELETE(Shuzu);
+    Layer::onExit();
 
+}
 
 

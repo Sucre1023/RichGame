@@ -7,6 +7,7 @@
 //
 
 #include "GetWalkPath.h"
+#include "GameBaseScene.h"
 //单列模式定义该类
 GetWalkPath *GetWalkPath::instance =NULL;
 GetWalkPath::GetWalkPath(void)
@@ -33,7 +34,7 @@ GetWalkPath *GetWalkPath::getInstance()
     return instance;
 }
 
-void GetWalkPath::getpath(cocos2d::Sprite *playerSprite, int stepsCount, bool **canpassgrid, int HangInGrid, int LieInGrid)
+void GetWalkPath::getpath(RicherPlayer *player, int stepsCount, bool **canpassgrid, int HangInGrid, int LieInGrid)
 {
     pathhang_vector.clear();
     pathlie_vector.clear();
@@ -41,38 +42,46 @@ void GetWalkPath::getpath(cocos2d::Sprite *playerSprite, int stepsCount, bool **
     int currentHang,currentLie;
     int nextHang,nextLie;
     //获取人物所在位置坐标
-    float x =playerSprite->getPositionX();
-    float y =playerSprite->getPositionY();
+    float x =player->getPositionX();
+    float y =player->getPositionY();
     //转换为行列
-    currentLie =x/32;
-    currentHang =(y-34)/34;
-    
-    std::vector<bool> direction_4;//当前位置的4个方向的位置是否可以走
-    std::vector<int>  canwalk_direction;//4个方向可以走的位置
+    currentLie =x/34;
+    currentHang =(y-32)/32;
+    pathhang_vector.push_back(currentHang);
+    pathlie_vector.push_back(currentLie);
+  
     //复制canpassgrid
     bool** canpassgrid_copy =new bool *[HangInGrid];
     for (int i=0; i<HangInGrid; i++)
-    {
-        canpassgrid_copy[i] =new bool[LieInGrid];
-    }
+       canpassgrid_copy[i] =new bool[LieInGrid];
+    
     for (int hang =0; hang<HangInGrid; hang++) {
         for (int lie =0; lie<LieInGrid; lie++) {
             canpassgrid_copy[hang][lie] =canpassgrid[hang][lie];
         }
     }
+    //角色从哪来
+//    int hangtem =player->getComeFromHang();
+//    int lietemp =player->getComeFromLie();
+//    if (hangtem <=-1||lietemp <=-1) {
+//        player->setComeFromHang(currentHang);
+//        player->setComeFromLie(currentLie);
+//    }
+//    canpassgrid_copy[player->getComeFromHang()][player->getComeFromLie()]=false;
     
-    
+    std::vector<bool> direction_4;//当前位置的4个方向的位置是否可以走
+    std::vector<int>  canwalk_direction;//4个方向可以走的位置
     int n =0;
     while (n<stepsCount)
     {
         //初始化数组为false
         direction_4.clear();
-        canwalk_direction.clear();
         for(int i=0;i<4;i++)
         {
             direction_4.push_back(false);
         
         }
+        canwalk_direction.clear();
         //分别判断四个方向
         direction_4[Up] =iscanwalk_direction_4(currentHang, currentLie, Up, canpassgrid_copy);
         direction_4[Down] =iscanwalk_direction_4(currentHang, currentLie, Down, canpassgrid_copy);
@@ -88,7 +97,8 @@ void GetWalkPath::getpath(cocos2d::Sprite *playerSprite, int stepsCount, bool **
         }
         //在可以行走的方向随机选一个,赋值下一步的行列数
         int rand_direction =rand()%canwalk_direction.size();
-        switch (canwalk_direction[rand_direction]) {
+        switch (canwalk_direction[rand_direction])
+        {
             case Up:
                 nextHang =currentHang +1;
                 nextLie =currentLie;
@@ -113,14 +123,17 @@ void GetWalkPath::getpath(cocos2d::Sprite *playerSprite, int stepsCount, bool **
         pathhang_vector.push_back(nextHang);
         pathlie_vector.push_back(nextLie);
         //前一步置为false
-        canpassgrid[currentHang][currentLie] =false;
+        canpassgrid_copy[currentHang][currentLie] =false;
         //
         currentHang =nextHang;
         currentLie =nextLie;
         //
-        n++;
+        n=n+1;
         
     }
+//    //
+//    player->setComeFromHang(pathhang_vector[pathhang_vector.size()-2]);
+//    player->setComeFromLie(pathlie_vector[pathlie_vector.size()-2]);
     //释放内存
     CC_SAFE_DELETE(canpassgrid_copy);
     direction_4.clear();

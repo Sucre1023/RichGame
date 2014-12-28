@@ -34,6 +34,9 @@ public:
 
     TMXTiledMap *_map;
     virtual void addMap();
+    void onExit();
+    void buttonpressd(Ref *p);
+
     CREATE_FUNC(GameBaseScene);
 private:
     //void drawTable(int playnumber);//根据人数绘画右边信息栏的表格
@@ -41,7 +44,6 @@ private:
     Sprite *rightbanner;
   
     void addbutton();
-    void buttonpressd(Ref *p);
 
 };
 #endif /* defined(__RichGame__GameBaseScene__) */

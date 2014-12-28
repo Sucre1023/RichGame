@@ -16,6 +16,8 @@ USING_NS_CC_EXT;
 USING_NS_CC;
 class RicherPlayer:public Sprite
 {
+    RicherPlayer();
+    ~RicherPlayer();
 public:
     static RicherPlayer* create(char* name,int tag,bool enemy,int money=50000,int strength=100);
     bool init(char* name,int tag,bool enemy,int money,int strength);
@@ -39,7 +41,9 @@ private:
     CC_SYNTHESIZE(int, _money, Money);
     CC_SYNTHESIZE(int, _strength, Strength);
     CC_SYNTHESIZE(bool, _enemy, Enemy);
-    
+    //
+    CC_SYNTHESIZE(int, _comefromhang, ComeFromHang);
+    CC_SYNTHESIZE(int, _comefromlie, ComeFromLie);
     
 };
 #endif /* defined(__RichGame__RicherPlayer__) */
