@@ -18,20 +18,16 @@ USING_NS_CC;
 class GameBaseScene:public Layer
 {
 public:
-   static int Hang;//地图总行数
-   static int Lie;//地图总列数
-   static bool** Shuzu;//行列数数组
+    int Hang;//地图总行数
+    int Lie;//地图总列数
+    bool** Shuzu;//行列数数组
     std::vector<Vec2>wayLayerPass_vector;//保存way图层道路砖块的坐标
     virtual void initShuzu();
     void setWayPass();//在way图层把道路在数组中的位置设置为true；
     Size visibleSie;
     virtual bool init();
     static Scene*createScene();
-//添加消息接收器和处理消息的函数，来让GO按钮消失
-    void addNotificationCenter();
-    void Go_messagereceived(Ref *data);
-    
-    static Vector<RicherPlayer*>players_vector;
+//
     
     RicherPlayer *playerone;
     RicherPlayer *playertwo;
@@ -43,11 +39,13 @@ public:
 
     CREATE_FUNC(GameBaseScene);
 private:
-    CC_SYNTHESIZE(Menu*, _menu, Menu);
     //void drawTable(int playnumber);//根据人数绘画右边信息栏的表格
     void addPlayer();//添加人物
     Sprite *rightbanner;
-  
+  //添加消息机制
+    void addNotificationCenter();
+    void messagereceived(Ref *data);
+    CC_SYNTHESIZE(Menu*, _menu, Menu);
     void addbutton();
 
 };

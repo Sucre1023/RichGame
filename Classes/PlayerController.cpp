@@ -8,7 +8,6 @@
 
 #include "PlayerController.h"
 #include "GameBaseScene.h"
-#include "GetWalkPath.h"
 PlayerController *PlayerController::instance =NULL;
 bool PlayerController::init()
 {
@@ -94,24 +93,4 @@ void PlayerController::endwalk()
     walkonestep(_player);
     
     
-}
-
-void PlayerController::pickonetogo()
-{
-    for (auto it =GameBaseScene::players_vector.begin(); it!=GameBaseScene::players_vector.end(); it++) {
-        RicherPlayer *richerplayer =dynamic_cast<RicherPlayer*>(*it);
-        if (richerplayer->getIsmyturn())
-        {
-            int randNumber =rand()%6+1;
-            GetWalkPath::getInstance()->getpath(richerplayer, randNumber, GameBaseScene::Shuzu, GameBaseScene::Hang, GameBaseScene::Lie);
-            richerplayer->startgo(GetWalkPath::getInstance()->getPathhang_vector(), GetWalkPath::getInstance()->getPathlie_vector());
-            return;
-        }
-    }
-    for (auto it =GameBaseScene::players_vector.begin(); it!=GameBaseScene::players_vector.end(); it++) {
-        RicherPlayer *richerplayer =dynamic_cast<RicherPlayer*>(*it);
-        richerplayer->setIsmyturn(true);
-    }
-    NotificationCenter::getInstance()->postNotification("go_message",String::create("1"));
-
 }

@@ -23,7 +23,6 @@ public:
     void endwalk();
     virtual bool init();
     CREATE_FUNC(PlayerController);
-    void pickonetogo();
 private:
     Action *Walk;
     int currenthang,currentlie,nexthang,nextlie;
