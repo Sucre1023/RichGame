@@ -459,10 +459,11 @@ TexturePacker
 
 \f0\fs36 \cf8 \
 \'c1\'f9\'a1\'a2\'c2\'d6\'c1\'f7\'d7\'df\'b6\'af\
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
 \f2\fs24 \cf0 \CocoaLigature1 {{\NeXTGraphic Pasted Graphic.tiff \width16840 \height10860
-}¬}
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
+
 \f0\fs36 \cf8 \CocoaLigature0 \
 \pard\tx529\pardeftab529\pardirnatural
 \cf8 \'b2\'c9\'d3\'c3\'cf\'fb\'cf\'a2\'bb\'fa\'d6\'c6\
@@ -482,7 +483,28 @@ TexturePacker
 \f0\fs36 \cf8 \
 \
 \'d4\'daplayer controller\'d6\'d0\'cc\'ed\'bc\'d3pickonewalk\'ba\'af\'ca\'fd\'a1\'a3\
+\
+*\'d3\'c5\'bb\'af\'d0\'d0\'d7\'df\'a3\'ac\'b8\'f8richer player\'bc\'d3\'ca\'f4\'d0\'d4\'a3\'ac\'bd\'c7\'c9\'ab\'b5\'ad\'c8\'eb\'b5\'ad\'b3\'f6\'d0\'a7\'b9\'fb\
 \pard\tx529\pardeftab529\pardirnatural
+
+\f3\fs22 \cf0  \cf3 this\cf0 ->\cf9 runAction\cf0 (\cf5 Sequence\cf0 ::\cf9 create\cf0 (fadeout,fadein,\cf5 CallFunc\cf0 ::\cf9 create\cf0 ([hangvector,lievector,\cf3 this\cf0 ]()\{  \cf5 PlayerController\cf0  *instance =\cf5 PlayerController\cf0 ::\cf9 getInstance\cf0 ();\
+        instance->\cf9 startwalk\cf0 (hangvector, lievector, \cf3 this\cf0 );\}),\cf3 NULL\cf0 ));\
+\
+
+\fs36 *
+\f0 \cf16 \'d0\'d0\'d7\'df\'c2\'b7\'be\'b6\'b1\'ea\'bc\'c7
+\f3\fs22 \cf0 \
+\cf3 static\cf0  \cf5 Vector\cf0 <\cf5 Sprite\cf0 *> pathMark_vector;\cf4 //
+\f0 \'b4\'e6\'b7\'c5\'d0\'d0\'d7\'df\'c2\'b7\'be\'b6\'b1\'ea\'bc\'c7\'b5\'c4\'c8\'dd\'c6\'f7
+\f3 \cf0 \
+    \cf3 void\cf0  addpathMake();\cf4 //
+\f0 \'cc\'ed\'bc\'d3\'b1\'ea\'bc\'c7
+\f3 \cf0 \
+    \cf3 static\cf0  \cf3 void\cf0  drawpathcolor(\cf22 std\cf0 ::\cf22 vector\cf0 <\cf3 int\cf0 >hangvector,\cf22 std\cf0 ::\cf22 vector\cf0 <\cf3 int\cf0 >lievector);\cf4 //
+\f0 \'bb\'e6\'d6\'c6\'c2\'b7\'be\'b6\'b1\'ea\'bc\'c7\
+
+\fs36 \'d4\'dastartgo \'bc\'d3\'c8\'eb\'b1\'ea\'bc\'c7\
+\'d4\'daendwalk\'d2\'fe\'b2\'d8\'b1\'ea\'bc\'c7\cf8 \
 
 \f3\fs22 \cf0 \
 }

@@ -141,8 +141,15 @@ void RicherPlayer::addPlayerAnimate()
 
 }
 void RicherPlayer::startgo(std::vector<int> hangvector, std::vector<int> lievector)
-{
-    PlayerController *instance =PlayerController::getInstance();
-    instance->startwalk(hangvector, lievector, this);
+{   //在行走前加入标记
+    //Blink *blink =Blink::create(0.5, 1);
+    
+    FadeOut *fadeout =FadeOut::create(0.2f);
+    FadeIn *fadein =FadeIn::create(0.2f);
+    GameBaseScene::drawpathcolor(hangvector, lievector);
+
+    this->runAction(Sequence::create(fadeout,fadein,CallFunc::create([hangvector,lievector,this](){  PlayerController *instance =PlayerController::getInstance();
+        instance->startwalk(hangvector, lievector, this);}),NULL));
+  
     
 }

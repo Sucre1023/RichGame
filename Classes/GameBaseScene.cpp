@@ -12,6 +12,7 @@ int GameBaseScene::Hang;
 int GameBaseScene::Lie;
 bool** GameBaseScene::Shuzu;
 Vector<RicherPlayer*>GameBaseScene::players_vector;
+Vector<Sprite*>GameBaseScene::pathMark_vector;
 
 Scene *GameBaseScene::createScene()
 {
@@ -36,6 +37,7 @@ bool GameBaseScene::init()
     addMap();
       initShuzu();
      setWayPass();
+    addpathMake();
     //addPlayerAnimation();
     addPlayer();
     addbutton();
@@ -215,5 +217,59 @@ void GameBaseScene::messagereceived(cocos2d::Ref *data)
     
     }
     
+
+}
+void GameBaseScene::addpathMake()
+{
+    Sprite *mark1 =Sprite::create("mark1.png");
+    Sprite *mark2 =Sprite::create("mark2.png");
+    Sprite *mark3 =Sprite::create("mark3.png");
+    Sprite *mark4 =Sprite::create("mark4.png");
+    Sprite *mark5 =Sprite::create("mark5.png");
+    Sprite *mark6 =Sprite::create("mark6.png");
+    //
+    mark1->setAnchorPoint(Point(0,0));
+    mark2->setAnchorPoint(Point(0,0));
+    mark3->setAnchorPoint(Point(0,0));
+    mark4->setAnchorPoint(Point(0,0));
+    mark5->setAnchorPoint(Point(0,0));
+    mark6->setAnchorPoint(Point(0,0));
+
+//设置为不可见
+    mark1->setVisible(false);
+    mark2->setVisible(false);
+    mark3->setVisible(false);
+    mark4->setVisible(false);
+    mark5->setVisible(false);
+    mark6->setVisible(false);
+    //
+    addChild(mark1);
+    addChild(mark2);
+    addChild(mark3);
+    addChild(mark4);
+    addChild(mark5);
+    addChild(mark6);
+
+    //
+    pathMark_vector.pushBack(mark1);
+    pathMark_vector.pushBack(mark2);
+    pathMark_vector.pushBack(mark3);
+    pathMark_vector.pushBack(mark4);
+    pathMark_vector.pushBack(mark5);
+    pathMark_vector.pushBack(mark6);
+
+
+}
+void GameBaseScene::drawpathcolor(std::vector<int> hangvector, std::vector<int> lievector)
+{
+//减去当前位置
+    //int stepcounts =hangvector.size()-1;
+    //从容器取出标记放在相应位置
+    for (int i=1; i<hangvector.size(); i++) {
+        pathMark_vector.at(i-1)->setPosition(Point(lievector[i]*34,hangvector[i]*32));
+        pathMark_vector.at(i-1)->setVisible(true);
+    }
+    
+
 
 }

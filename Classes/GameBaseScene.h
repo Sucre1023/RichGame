@@ -39,6 +39,11 @@ public:
     void onExit();
     void buttonpressd(Ref *p);
 
+    //
+    static Vector<Sprite*> pathMark_vector;//存放行走路径标记的容器
+    void addpathMake();//添加标记
+    static void drawpathcolor(std::vector<int>hangvector,std::vector<int>lievector);//绘制路径标记
+    
     CREATE_FUNC(GameBaseScene);
 private:
     //void drawTable(int playnumber);//根据人数绘画右边信息栏的表格

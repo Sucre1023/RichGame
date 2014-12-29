@@ -85,6 +85,8 @@ void PlayerController::startwalk(std::vector<int> hangVector, std::vector<int> l
 }
 void PlayerController::endwalk()
 {
+    //走一步就把标记隐藏
+    GameBaseScene::pathMark_vector.at(stepshasgone)->setVisible(false);
     stepshasgone++;
     if (stepshasgone >= stepscount) {
         _player->setIsmyturn(false);
