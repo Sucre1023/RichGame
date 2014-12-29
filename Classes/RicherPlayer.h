@@ -44,6 +44,7 @@ private:
     //
     CC_SYNTHESIZE(int, _comefromhang, ComeFromHang);
     CC_SYNTHESIZE(int, _comefromlie, ComeFromLie);
+    CC_SYNTHESIZE(bool, _Ismyturn,Ismyturn);
     
 };
 #endif /* defined(__RichGame__RicherPlayer__) */

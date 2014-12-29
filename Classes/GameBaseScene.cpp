@@ -8,6 +8,12 @@
 
 #include "GameBaseScene.h"
 #include "GetWalkPath.h"
+
+int GameBaseScene::Hang;
+int GameBaseScene::Lie;
+bool** GameBaseScene::Shuzu;
+Vector<RicherPlayer*>  GameBaseScene::players_vector;
+
 Scene *GameBaseScene::createScene()
 {
     auto scene =Scene::create();
@@ -34,6 +40,7 @@ bool GameBaseScene::init()
     //addPlayerAnimation();
     addPlayer();
     addbutton();
+    addNotificationCenter();
     
    
  
@@ -143,7 +150,7 @@ void GameBaseScene::addbutton()
 }
 void GameBaseScene::buttonpressd(cocos2d::Ref *p)
 {
-//    
+//
    GetWalkPath::getInstance()->getpath(playerone, 5, Shuzu, Hang, Lie);
     std::vector<int> hangvector =GetWalkPath::getInstance()->getPathhang_vector();
     std::vector<int> lievector =GetWalkPath::getInstance()->getPathlie_vector();
@@ -151,7 +158,48 @@ void GameBaseScene::buttonpressd(cocos2d::Ref *p)
         log("走到了第%d行,第%d列",hangvector[i],lievector[i]);
     }
 //    log("%d",hangvector.size());
+    
+    NotificationCenter::getInstance()->postNotification("go_message",String::create("0"));
+
     playerone->startgo(hangvector, lievector);
+
+}
+void GameBaseScene::addNotificationCenter()
+{
+//定义消息
+    NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(GameBaseScene::Go_messagereceived),"go_message", NULL);
+    
+
+}
+void GameBaseScene::Go_messagereceived(cocos2d::Ref *data)
+{
+    
+    int retmsgtype =((String *)data)->intValue();
+    Vector<Node*>vecMenuItem = getMenu()->getChildren();//把GO按钮放入Menu容器中
+    Size winSize =Director::getInstance()->getWinSize();
+    //接收到“1”，要把按钮从屏幕外面移动回来
+    if(retmsgtype ==1)
+    {
+        for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++) {
+            Node *node =dynamic_cast<Node*>(*it);
+            MoveBy *moveby =MoveBy::create(0.3, Point(-(node->getContentSize().width)*2,0));
+            node->runAction(moveby);
+            
+        }
+        
+    }else
+    {
+        for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++) {
+            Node *node =dynamic_cast<Node*>(*it);
+            MoveBy *moveby =MoveBy::create(0.3, Point((node->getContentSize().width)*2,0));
+            RotateBy *rotateby =RotateBy::create(1,360);//旋转动作
+            Action *action =Spawn::create(moveby,rotateby, NULL);
+            node->runAction(action);
+            
+        }
+
+    
+    }
 
 }
 void GameBaseScene::onExit()
