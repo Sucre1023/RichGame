@@ -8,6 +8,11 @@
 
 #include "GameBaseScene.h"
 #include "GetWalkPath.h"
+int GameBaseScene::Hang;
+int GameBaseScene::Lie;
+bool** GameBaseScene::Shuzu;
+Vector<RicherPlayer*>GameBaseScene::players_vector;
+
 Scene *GameBaseScene::createScene()
 {
     auto scene =Scene::create();
@@ -114,6 +119,7 @@ void GameBaseScene::addPlayer()
     playerone->setPosition(vec2_player1);
     playerone->setAnchorPoint(Point(0,0.5));
     addChild(playerone);
+    players_vector.pushBack(playerone);
     
     playertwo =RicherPlayer::create("player2",2, false);
     
@@ -124,6 +130,7 @@ void GameBaseScene::addPlayer()
     playertwo->setPosition(vec2_player2);
     playertwo->setAnchorPoint(Point(0,0.5));
     addChild(playertwo);
+    players_vector.pushBack(playertwo);
     
 }
 
@@ -144,8 +151,9 @@ void GameBaseScene::addbutton()
 }
 void GameBaseScene::buttonpressd(cocos2d::Ref *p)
 {
-//    
-   GetWalkPath::getInstance()->getpath(playerone, 5, Shuzu, Hang, Lie);
+//
+    randnumber =rand()%5 +1;
+   GetWalkPath::getInstance()->getpath(playerone, randnumber, Shuzu, Hang, Lie);
     std::vector<int> hangvector =GetWalkPath::getInstance()->getPathhang_vector();
     std::vector<int> lievector =GetWalkPath::getInstance()->getPathlie_vector();
     for (int i=0; i<hangvector.size(); i++) {
@@ -183,11 +191,11 @@ void GameBaseScene::messagereceived(cocos2d::Ref *data)
             node->runAction(moveby);
         }
     }
-    else{
+    else if(retMsgType ==1){
     
         for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++) {
             Node *node =dynamic_cast<Node*>(*it);
-            MoveBy *moveby =MoveBy::create(0.3f, Point((node->getContentSize().width)*3,0));
+            MoveBy *moveby =MoveBy::create(0.3f, Point(-(node->getContentSize().width)*3,0));
             node->runAction(moveby);
         }
     

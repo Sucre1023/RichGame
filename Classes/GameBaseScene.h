@@ -18,15 +18,17 @@ USING_NS_CC;
 class GameBaseScene:public Layer
 {
 public:
-    int Hang;//地图总行数
-    int Lie;//地图总列数
-    bool** Shuzu;//行列数数组
+   static int Hang;//地图总行数
+   static int Lie;//地图总列数
+   static bool** Shuzu;//行列数数组
     std::vector<Vec2>wayLayerPass_vector;//保存way图层道路砖块的坐标
     virtual void initShuzu();
     void setWayPass();//在way图层把道路在数组中的位置设置为true；
     Size visibleSie;
     virtual bool init();
     static Scene*createScene();
+    
+    static Vector<RicherPlayer*>players_vector;//存放人物的容器
 //
     
     RicherPlayer *playerone;
@@ -47,6 +49,7 @@ private:
     void messagereceived(Ref *data);
     CC_SYNTHESIZE(Menu*, _menu, Menu);
     void addbutton();
+    int randnumber;
 
 };
 #endif /* defined(__RichGame__GameBaseScene__) */

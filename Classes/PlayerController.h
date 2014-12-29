@@ -22,7 +22,9 @@ public:
     void startwalk(std::vector<int> hangvector,std::vector<int> lievector,RicherPlayer *player);
     void endwalk();
     virtual bool init();
+    void pickonetowalk();
     CREATE_FUNC(PlayerController);
+    
 private:
     Action *Walk;
     int currenthang,currentlie,nexthang,nextlie;

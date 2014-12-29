@@ -37,6 +37,7 @@ public:
     CC_SYNTHESIZE(Animate*, player_down_animate, down_animate);
   
 private:
+    CC_SYNTHESIZE(bool, _Ismyturn, Ismyturn);
     CC_SYNTHESIZE(std::string, _name, Name);
     CC_SYNTHESIZE(int, _money, Money);
     CC_SYNTHESIZE(int, _strength, Strength);

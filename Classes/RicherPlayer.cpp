@@ -46,6 +46,7 @@ bool RicherPlayer::init(char *name, int tag, bool enemy, int money, int strength
     _enemy = enemy;
     _money = money;
     _strength = strength;
+    _Ismyturn =true;
     plController =PlayerController::create();
     plController->retain();
     return true;
