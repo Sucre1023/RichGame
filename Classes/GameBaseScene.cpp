@@ -79,30 +79,30 @@ void GameBaseScene::addPlayer()
     player_1->cocos2d::Node::setPosition(visibleSie.width-120,visibleSie.height-70);
     addChild(player_1);
     
-    Label *player_1_money =Label::create();
-    player_1_money->setString("$");
+    player_1_money = Label::create();
+    //player_1_money->setString("$");
     player_1_money->setSystemFontSize(25);
-    player_1_money->setPosition(visibleSie.width-90,visibleSie.height-50);
+    player_1_money->setPosition(visibleSie.width-50,visibleSie.height-50);
     addChild(player_1_money);
-    Label *player_1_strength =Label::create();
-    player_1_strength->setString("+");
+   player_1_strength =Label::create();
+   // player_1_strength->setString("+");
     player_1_strength->setSystemFontSize(25);
-    player_1_strength->setPosition(visibleSie.width-90,visibleSie.height-90);
+    player_1_strength->setPosition(visibleSie.width-50,visibleSie.height-90);
     addChild(player_1_strength);
     //
     Sprite *player_2 =Sprite::create("player2.png");
     player_2->cocos2d::Node::setPosition(visibleSie.width-120,visibleSie.height-300);
     addChild(player_2);
     
-    Label *player_2_money =Label::create();
-    player_2_money->setString("$");
+    player_2_money =Label::create();
+   // player_2_money->setString("$");
     player_2_money->setSystemFontSize(25);
-    player_2_money->setPosition(visibleSie.width-90,visibleSie.height-270);
+    player_2_money->setPosition(visibleSie.width-50,visibleSie.height-270);
     addChild(player_2_money);
-    Label *player_2_strength =Label::create();
-    player_2_strength->setString("+");
+    player_2_strength =Label::create();
+   // player_2_strength->setString("+");
     player_2_strength->setSystemFontSize(25);
-    player_2_strength->setPosition(visibleSie.width-90,visibleSie.height-330);
+    player_2_strength->setPosition(visibleSie.width-50,visibleSie.height-310);
     addChild(player_2_strength);
     
     //随机种子
@@ -115,13 +115,27 @@ void GameBaseScene::addPlayer()
        int rand_way =rand()%(wayLayerPass_vector.size());//随机选一个id
        Vec2 vec2_player1 =wayLayerPass_vector.at(rand_way);//根据id选取一个位置的坐标
         vec2_player1.y +=32;//使人物居于道路中间
-
+//显示人物1的金钱、能力
+    char money1[20];
+    sprintf(money1, "$ %d",playerone->getMoney());
+    char strength1[20];
+    sprintf(strength1, "+ %d",playerone->getStrength());
+    getPlayer_1_money()->setString(money1);
+    getPlayer_1_strnegth()->setString(strength1);
+    
     playerone->setPosition(vec2_player1);
     playerone->setAnchorPoint(Point(0,0.5));
     addChild(playerone);
     players_vector.pushBack(playerone);
     
     playertwo =RicherPlayer::create("player2",2, false);
+//显示人物2的金钱、能力
+    char money2[20];
+    sprintf(money2, "$ %d",playertwo->getMoney());
+    char strength2[20];
+    sprintf(strength2, "+ %d",playertwo->getStrength());
+    getPlayer_2_money()->setString(money2);
+    getPlayer_2_strength()->setString(strength2);
     
     int rand_way_1 =rand()%(wayLayerPass_vector.size());//随机选一个id
     Vec2 vec2_player2 =wayLayerPass_vector.at(rand_way_1);//根据id选取一个位置的坐标

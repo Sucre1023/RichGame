@@ -50,6 +50,12 @@ private:
     CC_SYNTHESIZE(Menu*, _menu, Menu);
     void addbutton();
     int randnumber;
+    CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);
+    CC_SYNTHESIZE(Label*, player_2_money, Player_2_money);
+    CC_SYNTHESIZE(Label*, player_1_strength, Player_1_strnegth);
+    CC_SYNTHESIZE(Label*, player_2_strength, Player_2_strength);
+
+
 
 };
 #endif /* defined(__RichGame__GameBaseScene__) */
