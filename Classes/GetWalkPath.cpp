@@ -61,13 +61,13 @@ void GetWalkPath::getpath(RicherPlayer *player, int stepsCount, bool **canpassgr
         }
     }
     //角色从哪来
-//    int hangtem =player->getComeFromHang();
-//    int lietemp =player->getComeFromLie();
-//    if (hangtem <=-1||lietemp <=-1) {
-//        player->setComeFromHang(currentHang);
-//        player->setComeFromLie(currentLie);
-//    }
-//    canpassgrid_copy[player->getComeFromHang()][player->getComeFromLie()]=false;
+    int hangtem =player->getComeFromHang();
+    int lietemp =player->getComeFromLie();
+    if (hangtem <=-1||lietemp <=-1) {
+        player->setComeFromHang(currentHang);
+        player->setComeFromLie(currentLie);
+    }
+    canpassgrid_copy[player->getComeFromHang()][player->getComeFromLie()]=false;
     
     std::vector<bool> direction_4;//当前位置的4个方向的位置是否可以走
     std::vector<int>  canwalk_direction;//4个方向可以走的位置
@@ -131,9 +131,16 @@ void GetWalkPath::getpath(RicherPlayer *player, int stepsCount, bool **canpassgr
         n=n+1;
         
     }
-//    //
-//    player->setComeFromHang(pathhang_vector[pathhang_vector.size()-2]);
-//    player->setComeFromLie(pathlie_vector[pathlie_vector.size()-2]);
+  //pathhang_vector里包含了当前位置
+    if (pathhang_vector.size() ==1)
+    {
+        player->setComeFromHang(pathhang_vector[pathhang_vector.size()-1]);
+        player->setComeFromLie(pathlie_vector[pathlie_vector.size()-1]);
+    }else
+    {
+    player->setComeFromHang(pathhang_vector[pathhang_vector.size()-2]);
+        player->setComeFromLie(pathlie_vector[pathlie_vector.size()-2]);
+    }
     //释放内存
     CC_SAFE_DELETE(canpassgrid_copy);
     direction_4.clear();

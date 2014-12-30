@@ -55,6 +55,10 @@ private:
     CC_SYNTHESIZE(Menu*, _menu, Menu);
     void addbutton();
     int randnumber;
+    void addDice();//添加色子
+    SpriteFrameCache *dice_framecache;
+    Animate *dice_animate;
+    Sprite *diceframe;
     CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);
     CC_SYNTHESIZE(Label*, player_2_money, Player_2_money);
     CC_SYNTHESIZE(Label*, player_1_strength, Player_1_strnegth);

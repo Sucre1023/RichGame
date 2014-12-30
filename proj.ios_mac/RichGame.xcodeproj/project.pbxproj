@@ -37,6 +37,10 @@
 		1867AEFD1A519C5800A83F0A /* mark4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867AEF71A519C5800A83F0A /* mark4.png */; };
 		1867AEFE1A519C5800A83F0A /* mark5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867AEF81A519C5800A83F0A /* mark5.png */; };
 		1867AEFF1A519C5800A83F0A /* mark6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867AEF91A519C5800A83F0A /* mark6.png */; };
+		1867AF071A52324600A83F0A /* dice.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1867AF031A52324600A83F0A /* dice.plist */; };
+		1867AF081A52324600A83F0A /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867AF041A52324600A83F0A /* dice.png */; };
+		1867AF091A52324600A83F0A /* digital_round.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1867AF051A52324600A83F0A /* digital_round.plist */; };
+		1867AF0A1A52324600A83F0A /* digital_round.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867AF061A52324600A83F0A /* digital_round.png */; };
 		18A0E61F1A4A65300055F7A0 /* sea 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61C1A4A65300055F7A0 /* sea 2.png */; };
 		18A0E6201A4A65300055F7A0 /* way.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61D1A4A65300055F7A0 /* way.png */; };
 		18AE16B81A4D7AE10062CD78 /* haidi2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18AE16B71A4D7AE10062CD78 /* haidi2.tmx */; };
@@ -288,6 +292,10 @@
 		1867AEF71A519C5800A83F0A /* mark4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark4.png; sourceTree = "<group>"; };
 		1867AEF81A519C5800A83F0A /* mark5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark5.png; sourceTree = "<group>"; };
 		1867AEF91A519C5800A83F0A /* mark6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mark6.png; sourceTree = "<group>"; };
+		1867AF031A52324600A83F0A /* dice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dice.plist; sourceTree = "<group>"; };
+		1867AF041A52324600A83F0A /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
+		1867AF051A52324600A83F0A /* digital_round.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = digital_round.plist; sourceTree = "<group>"; };
+		1867AF061A52324600A83F0A /* digital_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digital_round.png; sourceTree = "<group>"; };
 		18A0E61C1A4A65300055F7A0 /* sea 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sea 2.png"; sourceTree = "<group>"; };
 		18A0E61D1A4A65300055F7A0 /* way.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = way.png; sourceTree = "<group>"; };
 		18AE16B71A4D7AE10062CD78 /* haidi2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haidi2.tmx; sourceTree = "<group>"; };
@@ -553,6 +561,10 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1867AF031A52324600A83F0A /* dice.plist */,
+				1867AF041A52324600A83F0A /* dice.png */,
+				1867AF051A52324600A83F0A /* digital_round.plist */,
+				1867AF061A52324600A83F0A /* digital_round.png */,
 				1867AEF41A519C5800A83F0A /* mark1.png */,
 				1867AEF51A519C5800A83F0A /* mark2.png */,
 				1867AEF61A519C5800A83F0A /* mark3.png */,
@@ -789,13 +801,17 @@
 				18AE16B81A4D7AE10062CD78 /* haidi2.tmx in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				185DE5EC1A4832FD00EF7C5E /* stage_background2.png in Resources */,
+				1867AF091A52324600A83F0A /* digital_round.plist in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				1867AEFB1A519C5800A83F0A /* mark2.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				1867AF071A52324600A83F0A /* dice.plist in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				185DE5F91A4945F500EF7C5E /* player1.png in Resources */,
+				1867AF0A1A52324600A83F0A /* digital_round.png in Resources */,
+				1867AF081A52324600A83F0A /* dice.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,

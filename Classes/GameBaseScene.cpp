@@ -40,6 +40,7 @@ bool GameBaseScene::init()
     addpathMake();
     //addPlayerAnimation();
     addPlayer();
+    addDice();
     addbutton();
     addNotificationCenter();
    
@@ -168,7 +169,8 @@ void GameBaseScene::addbutton()
 void GameBaseScene::buttonpressd(cocos2d::Ref *p)
 {
 //
-    randnumber =rand()%5 +1;
+
+    randnumber =rand()%6 +1;
    GetWalkPath::getInstance()->getpath(playerone, randnumber, Shuzu, Hang, Lie);
     std::vector<int> hangvector =GetWalkPath::getInstance()->getPathhang_vector();
     std::vector<int> lievector =GetWalkPath::getInstance()->getPathlie_vector();
@@ -206,14 +208,22 @@ void GameBaseScene::messagereceived(cocos2d::Ref *data)
             MoveBy *moveby =MoveBy::create(0.3f, Point((node->getContentSize().width)*3,0));
             node->runAction(moveby);
         }
+        
+        char stop[20];
+        sprintf(stop, "dice_%02d.png",randnumber);
+        diceframe->setSpriteFrame(dice_framecache->getSpriteFrameByName(stop));
+        diceframe->pause();
     }
-    else if(retMsgType ==1){
+    else if(retMsgType ==1)
+    {
     
         for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++) {
             Node *node =dynamic_cast<Node*>(*it);
             MoveBy *moveby =MoveBy::create(0.3f, Point(-(node->getContentSize().width)*3,0));
             node->runAction(moveby);
         }
+        
+        diceframe->resume();
     
     }
     
@@ -269,7 +279,31 @@ void GameBaseScene::drawpathcolor(std::vector<int> hangvector, std::vector<int> 
         pathMark_vector.at(i-1)->setPosition(Point(lievector[i]*34,hangvector[i]*32));
         pathMark_vector.at(i-1)->setVisible(true);
     }
+}
+void GameBaseScene::addDice()
+{
+    dice_framecache =SpriteFrameCache::getInstance();
+    dice_framecache->addSpriteFramesWithFile("dice.plist", "dice.png");
     
-
+    Vector<SpriteFrame*> dice_vector;
+    char name[20];
+    for (int i=1; i<=6; i++) {
+        sprintf(name, "dice_%02d.png",i);
+        dice_vector.pushBack(dice_framecache->getSpriteFrameByName(name));
+        
+    }
+    //
+    if (!AnimationCache::getInstance()->getAnimation("dice_animation")) {
+        AnimationCache::getInstance()->addAnimation(Animation::createWithSpriteFrames(dice_vector,0.1), "dice_animation");
+    }
+    dice_animate =Animate::create(AnimationCache::getInstance()->getAnimation("dice_animation"));
+    dice_animate->retain();
+    
+    //
+    diceframe =Sprite::createWithSpriteFrame(dice_framecache->getSpriteFrameByName("dice_01.png"));
+    diceframe->setPosition(Point(visibleSie.width-90,visibleSie.height/3));
+    addChild(diceframe);
+    
+    diceframe->runAction(RepeatForever::create(dice_animate));
 
 }

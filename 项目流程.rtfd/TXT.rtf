@@ -458,6 +458,13 @@ TexturePacker
 \pard\tx529\pardeftab529\pardirnatural
 
 \f0\fs36 \cf8 \
+*\'b7\'c0\'d6\'b9\'d7\'df\'bb\'d8\'cd\'b7\'c2\'b7\
+   \'d4\'dagetwalkpath\'d6\'d0\'bc\'d3\'c8\'eb\'d0\'c2\'ca\'f4\'d0\'d4
+\f3\fs22 \cf9 ComeFromHang
+\f0 \'a1\'a2
+\f3 ComeFromLie
+\f0\fs36 \cf8 \'a3\'ac\'b0\'d1\'b5\'b1\'c7\'b0\'ce\'bb\'d6\'c3\'b5\'c4\'d6\'ae\'c7\'b0\'d2\'bb\'b2\'bd\'c9\'e8\'d6\'c3\'ce\'aafalse\
+\
 \'c1\'f9\'a1\'a2\'c2\'d6\'c1\'f7\'d7\'df\'b6\'af\
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural
 
@@ -490,10 +497,12 @@ TexturePacker
 \f3\fs22 \cf0  \cf3 this\cf0 ->\cf9 runAction\cf0 (\cf5 Sequence\cf0 ::\cf9 create\cf0 (fadeout,fadein,\cf5 CallFunc\cf0 ::\cf9 create\cf0 ([hangvector,lievector,\cf3 this\cf0 ]()\{  \cf5 PlayerController\cf0  *instance =\cf5 PlayerController\cf0 ::\cf9 getInstance\cf0 ();\
         instance->\cf9 startwalk\cf0 (hangvector, lievector, \cf3 this\cf0 );\}),\cf3 NULL\cf0 ));\
 \
+\pard\tx529\pardeftab529\pardirnatural
 
-\fs36 *
+\fs36 \cf0 *
 \f0 \cf16 \'d0\'d0\'d7\'df\'c2\'b7\'be\'b6\'b1\'ea\'bc\'c7
 \f3\fs22 \cf0 \
+\pard\tx529\pardeftab529\pardirnatural
 \cf3 static\cf0  \cf5 Vector\cf0 <\cf5 Sprite\cf0 *> pathMark_vector;\cf4 //
 \f0 \'b4\'e6\'b7\'c5\'d0\'d0\'d7\'df\'c2\'b7\'be\'b6\'b1\'ea\'bc\'c7\'b5\'c4\'c8\'dd\'c6\'f7
 \f3 \cf0 \
@@ -502,9 +511,17 @@ TexturePacker
 \f3 \cf0 \
     \cf3 static\cf0  \cf3 void\cf0  drawpathcolor(\cf22 std\cf0 ::\cf22 vector\cf0 <\cf3 int\cf0 >hangvector,\cf22 std\cf0 ::\cf22 vector\cf0 <\cf3 int\cf0 >lievector);\cf4 //
 \f0 \'bb\'e6\'d6\'c6\'c2\'b7\'be\'b6\'b1\'ea\'bc\'c7\
+\pard\tx529\pardeftab529\pardirnatural
 
-\fs36 \'d4\'dastartgo \'bc\'d3\'c8\'eb\'b1\'ea\'bc\'c7\
-\'d4\'daendwalk\'d2\'fe\'b2\'d8\'b1\'ea\'bc\'c7\cf8 \
+\fs36 \cf4 \'d4\'dastartgo \'bc\'d3\'c8\'eb\'b1\'ea\'bc\'c7\
+\'d4\'daendwalk\'d2\'fe\'b2\'d8\'b1\'ea\'bc\'c7\
+\
+*\'bc\'d3\'c8\'eb\'c9\'ab\'d7\'d6\
+      \'d4\'dagamenasescene\'d6\'d0\'bc\'d3\'c8\'eb\'a3\'ac\'ca\'b9\'d3\'c3\'be\'ab\'c1\'e9\'bb\'ba\'b4\'e6\'d6\'a1spriteframecache\'c0\'b4\'d6\'c6\'d7\'f7\'b6\'af\'bb\'ad\'a1\'a3\'cd\'a8\'b9\'fd\'c9\'cf\'c3\'e6\'bc\'d3\'c8\'eb\'b5\'c4\'cf\'fb\'cf\'a2\'bb\'fa\'d6\'c6\'c0\'b4\'d4\'cb\'d0\'d0\'b6\'af\'bb\'ad\'a1\'a3\
+\
+\pard\tx529\pardeftab529\pardirnatural
+\cf8 \
+\pard\tx529\pardeftab529\pardirnatural
 
 \f3\fs22 \cf0 \
 }
