@@ -59,6 +59,13 @@ private:
     SpriteFrameCache *dice_framecache;
     Animate *dice_animate;
     Sprite *diceframe;
+    
+    void addroundcounts();//添加回合
+    void refreshround();//刷新回合
+    Vector<SpriteFrame*>round_picture_vector;//存放从精灵缓存帧取出的图片
+    Vector<Sprite*>refresh_round_vector;//存放待刷新的数字
+    int roundcount;
+    
     CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);
     CC_SYNTHESIZE(Label*, player_2_money, Player_2_money);
     CC_SYNTHESIZE(Label*, player_1_strength, Player_1_strnegth);

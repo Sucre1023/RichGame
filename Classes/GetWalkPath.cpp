@@ -95,6 +95,27 @@ void GetWalkPath::getpath(RicherPlayer *player, int stepsCount, bool **canpassgr
                 canwalk_direction.push_back(i);
             }
         }
+
+//        if (canwalk_direction.size()==0)
+//        {
+//            canpassgrid_copy[player->getComeFromHang()][player->getComeFromLie()]=true;
+//            for (int i=0; i<4; i++)
+//            {
+//                if (direction_4[i])
+//                {
+//                    canwalk_direction.push_back(i);
+//                }
+//            }
+//            rand_direction =rand()%canwalk_direction.size();
+//
+//            
+//        }
+//        
+//        else
+//        {
+//        rand_direction =rand()%canwalk_direction.size();
+//            
+//        }
         //在可以行走的方向随机选一个,赋值下一步的行列数
         int rand_direction =rand()%canwalk_direction.size();
         switch (canwalk_direction[rand_direction])
@@ -132,7 +153,7 @@ void GetWalkPath::getpath(RicherPlayer *player, int stepsCount, bool **canpassgr
         
     }
   //pathhang_vector里包含了当前位置
-    if (pathhang_vector.size() ==1)
+    if (pathhang_vector.size() ==2)
     {
         player->setComeFromHang(pathhang_vector[pathhang_vector.size()-1]);
         player->setComeFromLie(pathlie_vector[pathlie_vector.size()-1]);

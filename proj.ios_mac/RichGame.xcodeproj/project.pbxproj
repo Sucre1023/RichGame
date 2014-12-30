@@ -13,6 +13,9 @@
 		183B7C1C1A4BF5CB006D63A6 /* player1_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B7C181A4BF5CB006D63A6 /* player1_anim.plist */; };
 		183B7C1D1A4BF5CB006D63A6 /* player2_anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B7C191A4BF5CB006D63A6 /* player2_anim.plist */; };
 		183B7C221A4C1E83006D63A6 /* RicherPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183B7C201A4C1E83006D63A6 /* RicherPlayer.cpp */; };
+		183E5AC71A527972002E6916 /* haidishijie.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183E5AC61A527972002E6916 /* haidishijie.tmx */; };
+		183E5ACB1A5279DC002E6916 /* haidi2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183E5ACA1A5279DC002E6916 /* haidi2.tmx */; };
+		183E5ACD1A527AB6002E6916 /* haidishijie2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183E5ACC1A527AB6002E6916 /* haidishijie2.tmx */; };
 		185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */; };
 		185DE5D11A47B36800EF7C5E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D01A47B36800EF7C5E /* background.png */; };
 		185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D51A47BAC500EF7C5E /* normal_menu.png */; };
@@ -43,7 +46,6 @@
 		1867AF0A1A52324600A83F0A /* digital_round.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867AF061A52324600A83F0A /* digital_round.png */; };
 		18A0E61F1A4A65300055F7A0 /* sea 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61C1A4A65300055F7A0 /* sea 2.png */; };
 		18A0E6201A4A65300055F7A0 /* way.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0E61D1A4A65300055F7A0 /* way.png */; };
-		18AE16B81A4D7AE10062CD78 /* haidi2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 18AE16B71A4D7AE10062CD78 /* haidi2.tmx */; };
 		18AE16BC1A4E48200062CD78 /* PlayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18AE16BA1A4E48200062CD78 /* PlayerController.cpp */; };
 		18CCB1B91A4BB7BA00822BB7 /* go1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CCB1B81A4BB7BA00822BB7 /* go1.png */; };
 		18DF5E7A1A4D088C008C2C4A /* GetWalkPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18DF5E781A4D088C008C2C4A /* GetWalkPath.cpp */; };
@@ -263,6 +265,9 @@
 		183B7C191A4BF5CB006D63A6 /* player2_anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = player2_anim.plist; sourceTree = "<group>"; };
 		183B7C201A4C1E83006D63A6 /* RicherPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RicherPlayer.cpp; path = ../Classes/RicherPlayer.cpp; sourceTree = "<group>"; };
 		183B7C211A4C1E83006D63A6 /* RicherPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RicherPlayer.h; path = ../Classes/RicherPlayer.h; sourceTree = "<group>"; };
+		183E5AC61A527972002E6916 /* haidishijie.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haidishijie.tmx; sourceTree = "<group>"; };
+		183E5ACA1A5279DC002E6916 /* haidi2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haidi2.tmx; sourceTree = "<group>"; };
+		183E5ACC1A527AB6002E6916 /* haidishijie2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haidishijie2.tmx; sourceTree = "<group>"; };
 		185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene.cpp; sourceTree = "<group>"; };
 		185DE5C91A47AE7C00EF7C5E /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene.h; sourceTree = "<group>"; };
 		185DE5D01A47B36800EF7C5E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -298,7 +303,6 @@
 		1867AF061A52324600A83F0A /* digital_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digital_round.png; sourceTree = "<group>"; };
 		18A0E61C1A4A65300055F7A0 /* sea 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sea 2.png"; sourceTree = "<group>"; };
 		18A0E61D1A4A65300055F7A0 /* way.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = way.png; sourceTree = "<group>"; };
-		18AE16B71A4D7AE10062CD78 /* haidi2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haidi2.tmx; sourceTree = "<group>"; };
 		18AE16BA1A4E48200062CD78 /* PlayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerController.cpp; path = ../Classes/PlayerController.cpp; sourceTree = "<group>"; };
 		18AE16BB1A4E48200062CD78 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerController.h; path = ../Classes/PlayerController.h; sourceTree = "<group>"; };
 		18CCB1B81A4BB7BA00822BB7 /* go1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go1.png; sourceTree = "<group>"; };
@@ -561,6 +565,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				183E5ACC1A527AB6002E6916 /* haidishijie2.tmx */,
+				183E5ACA1A5279DC002E6916 /* haidi2.tmx */,
+				183E5AC61A527972002E6916 /* haidishijie.tmx */,
 				1867AF031A52324600A83F0A /* dice.plist */,
 				1867AF041A52324600A83F0A /* dice.png */,
 				1867AF051A52324600A83F0A /* digital_round.plist */,
@@ -571,7 +578,6 @@
 				1867AEF71A519C5800A83F0A /* mark4.png */,
 				1867AEF81A519C5800A83F0A /* mark5.png */,
 				1867AEF91A519C5800A83F0A /* mark6.png */,
-				18AE16B71A4D7AE10062CD78 /* haidi2.tmx */,
 				183B7C161A4BF5CB006D63A6 /* player1_anim.png */,
 				183B7C171A4BF5CB006D63A6 /* player2_anim.png */,
 				183B7C181A4BF5CB006D63A6 /* player1_anim.plist */,
@@ -795,10 +801,10 @@
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				185DE5D81A47BACE00EF7C5E /* press_menu.png in Resources */,
+				183E5ACD1A527AB6002E6916 /* haidishijie2.tmx in Resources */,
 				1862E2771A46E51F00E41623 /* second.png in Resources */,
 				183B7C1B1A4BF5CB006D63A6 /* player2_anim.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
-				18AE16B81A4D7AE10062CD78 /* haidi2.tmx in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				185DE5EC1A4832FD00EF7C5E /* stage_background2.png in Resources */,
 				1867AF091A52324600A83F0A /* digital_round.plist in Resources */,
@@ -812,8 +818,10 @@
 				185DE5F91A4945F500EF7C5E /* player1.png in Resources */,
 				1867AF0A1A52324600A83F0A /* digital_round.png in Resources */,
 				1867AF081A52324600A83F0A /* dice.png in Resources */,
+				183E5ACB1A5279DC002E6916 /* haidi2.tmx in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */,
+				183E5AC71A527972002E6916 /* haidishijie.tmx in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				18A0E61F1A4A65300055F7A0 /* sea 2.png in Resources */,
 			);

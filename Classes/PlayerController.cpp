@@ -29,6 +29,13 @@ PlayerController *PlayerController::getInstance()
     return instance;
 
 }
+PlayerController::PlayerController()
+{
+    struct timeval now;
+    gettimeofday(&now, NULL);
+    unsigned rand_seed =(unsigned)(now.tv_sec*1000 + now.tv_usec/1000);
+    srand(rand_seed);
+}
 PlayerController::~PlayerController()
 {
     Walk->release();
@@ -106,7 +113,8 @@ void PlayerController::pickonetowalk()
         RicherPlayer *richerplayer =dynamic_cast<RicherPlayer*>(*it);
         if (richerplayer->getIsmyturn())
         {
-            GetWalkPath::getInstance()->getpath(richerplayer,3, GameBaseScene::Shuzu, GameBaseScene::Hang, GameBaseScene::Lie);
+            int randnumber =rand()%6 +1;
+            GetWalkPath::getInstance()->getpath(richerplayer,randnumber, GameBaseScene::Shuzu, GameBaseScene::Hang, GameBaseScene::Lie);
             richerplayer->startgo(GetWalkPath::getInstance()->getPathhang_vector(), GetWalkPath::getInstance()->getPathlie_vector());
             return;
         }

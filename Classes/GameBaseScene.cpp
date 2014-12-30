@@ -41,6 +41,8 @@ bool GameBaseScene::init()
     //addPlayerAnimation();
     addPlayer();
     addDice();
+    addroundcounts();
+    refreshround();
     addbutton();
     addNotificationCenter();
    
@@ -222,7 +224,8 @@ void GameBaseScene::messagereceived(cocos2d::Ref *data)
             MoveBy *moveby =MoveBy::create(0.3f, Point(-(node->getContentSize().width)*3,0));
             node->runAction(moveby);
         }
-        
+        roundcount+=1;
+        refreshround();
         diceframe->resume();
     
     }
@@ -305,5 +308,53 @@ void GameBaseScene::addDice()
     addChild(diceframe);
     
     diceframe->runAction(RepeatForever::create(dice_animate));
+
+}
+
+void GameBaseScene::addroundcounts()
+{
+    roundcount =0;
+    SpriteFrameCache *round_framecache =SpriteFrameCache::getInstance();
+    round_framecache->addSpriteFramesWithFile("digital_round.plist");
+    char name[20];
+    memset(name, 0, 20);
+    for (int i=0; i<10; i++) {
+        sprintf(name, "digital_%d.png",i);
+        round_picture_vector.pushBack(round_framecache->getSpriteFrameByName(name));
+    }
+
+}
+
+void GameBaseScene::refreshround()
+{
+    //刷新前把之前显示的隐藏
+    for (auto it =refresh_round_vector.begin(); it!=refresh_round_vector.end(); it++) {
+        (*it)->setVisible(false);
+    }
+    
+    refresh_round_vector.clear();
+    int count =roundcount;
+    Sprite *sp;
+    //游戏开始的回合
+    if (count ==0) {
+        sp = Sprite::createWithSpriteFrame(round_picture_vector.at(0));
+        addChild(sp);
+        refresh_round_vector.pushBack(sp);
+    }
+    while (count !=0) {
+        sp =Sprite::createWithSpriteFrame(round_picture_vector.at(count%10));
+        addChild(sp);
+        refresh_round_vector.pushBack(sp);
+        count =count/10;
+    }
+    //取图时是倒序取得，所以要把顺序反一下
+    refresh_round_vector.reverse();
+    //显示图片
+    for(int i =0;i<refresh_round_vector.size();i++)
+    {
+        Sprite *st =refresh_round_vector.at(i);
+        st->setPosition(Point((visibleSie.width-90)+(i*25),visibleSie.height/10));
+        st->setVisible(true);
+    }
 
 }

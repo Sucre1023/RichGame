@@ -18,6 +18,7 @@ class PlayerController:public Layer
 public:
     static PlayerController *instance;
     static PlayerController *getInstance();
+    PlayerController();
     ~PlayerController();
     void startwalk(std::vector<int> hangvector,std::vector<int> lievector,RicherPlayer *player);
     void endwalk();
