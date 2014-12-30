@@ -3,8 +3,8 @@
  <tileset firstgid="1" name="sea 2" tilewidth="34" tileheight="32">
   <image source="sea 2.png" width="986" height="640"/>
  </tileset>
- <tileset firstgid="581" name="way" tilewidth="34" tileheight="32">
-  <image source="way.png" width="986" height="32"/>
+ <tileset firstgid="581" name="way3" tilewidth="34" tileheight="32">
+  <image source="way3.png" width="986" height="32"/>
  </tileset>
  <layer name="ground" width="29" height="20">
   <data encoding="base64" compression="zlib">
@@ -13,7 +13,12 @@
  </layer>
  <layer name="way" width="29" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2D4Ag8mBgZ3KPZAo2FsagM3JDNdmVBpdHla2IkOQHYPVTuxxZcrDnNd0dRi00uMm8hxN7Z4JsU8fP4i1m508wgBNwrsdMMRxoQAch4kFVCaV0nxrysTIj1R005XJtxpBSZHab7BlwfQMSlxNxIAAH32F0A=
+   eJxjYBgFwxm4MTEwuEOxBxAHIfGRMUw8GEktucCfTL1uFNhJrt6gAbBzIPw5EHaC0lEglrRGTPrwYELoJzc9IQNS/UBJeMEAqXmIGnaSakbgANhJbtniwYRalpEChlK+odRObGU8KLwC0MSCmVDL/1HAwAAAN/kTVw==
+  </data>
+ </layer>
+ <layer name="land" width="29" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4B+wJUJgpH5QxmQ6n5q+HcgwmyoxBN62hoq7oYBStw7mi7wg4F0K7a0iI0/lMJzOAIAflYFRg==
   </data>
  </layer>
 </map>
