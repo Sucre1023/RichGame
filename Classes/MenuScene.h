@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
+#include "PopupLayer.h"
 USING_NS_CC_EXT;
 USING_NS_CC;
 
@@ -26,6 +27,7 @@ private:
     void addMenuSprites();
     void menuTouchDown (Ref* pSender,Control::EventType event);// Menu点击回调方法
     Label *setmusic;
-    
+    void popuplayer();
+    void quitbtncallfunc(Node *p);
 };
 #endif /* defined(__RichGame__MenuScene__) */

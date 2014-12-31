@@ -13,6 +13,7 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include"RicherPlayer.h"
+
 USING_NS_CC_EXT;
 USING_NS_CC;
 class GameBaseScene:public Layer
@@ -65,6 +66,7 @@ private:
     Vector<SpriteFrame*>round_picture_vector;//存放从精灵缓存帧取出的图片
     Vector<Sprite*>refresh_round_vector;//存放待刷新的数字
     int roundcount;
+    
     
     CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);
     CC_SYNTHESIZE(Label*, player_2_money, Player_2_money);
