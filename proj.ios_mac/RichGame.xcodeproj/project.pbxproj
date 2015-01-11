@@ -15,11 +15,6 @@
 		183B7C221A4C1E83006D63A6 /* RicherPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183B7C201A4C1E83006D63A6 /* RicherPlayer.cpp */; };
 		183E5ACF1A528404002E6916 /* haidishijie3.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 183E5ACE1A528404002E6916 /* haidishijie3.tmx */; };
 		183E5AD11A52840E002E6916 /* way3.png in Resources */ = {isa = PBXBuildFile; fileRef = 183E5AD01A52840E002E6916 /* way3.png */; };
-		183E5AD61A529412002E6916 /* button_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 183E5AD21A529412002E6916 /* button_bg1.png */; };
-		183E5AD71A529412002E6916 /* button_bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 183E5AD31A529412002E6916 /* button_bg2.png */; };
-		183E5AD81A529412002E6916 /* button_bg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 183E5AD41A529412002E6916 /* button_bg3.png */; };
-		183E5AD91A529412002E6916 /* dialog_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 183E5AD51A529412002E6916 /* dialog_bg.png */; };
-		183E5ADC1A5295B7002E6916 /* PopupLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183E5ADA1A5295B7002E6916 /* PopupLayer.cpp */; };
 		185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */; };
 		185DE5D11A47B36800EF7C5E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D01A47B36800EF7C5E /* background.png */; };
 		185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 185DE5D51A47BAC500EF7C5E /* normal_menu.png */; };
@@ -271,12 +266,6 @@
 		183B7C211A4C1E83006D63A6 /* RicherPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RicherPlayer.h; path = ../Classes/RicherPlayer.h; sourceTree = "<group>"; };
 		183E5ACE1A528404002E6916 /* haidishijie3.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haidishijie3.tmx; sourceTree = "<group>"; };
 		183E5AD01A52840E002E6916 /* way3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = way3.png; sourceTree = "<group>"; };
-		183E5AD21A529412002E6916 /* button_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg1.png; sourceTree = "<group>"; };
-		183E5AD31A529412002E6916 /* button_bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg2.png; sourceTree = "<group>"; };
-		183E5AD41A529412002E6916 /* button_bg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_bg3.png; sourceTree = "<group>"; };
-		183E5AD51A529412002E6916 /* dialog_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialog_bg.png; sourceTree = "<group>"; };
-		183E5ADA1A5295B7002E6916 /* PopupLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PopupLayer.cpp; path = ../Classes/PopupLayer.cpp; sourceTree = "<group>"; };
-		183E5ADB1A5295B7002E6916 /* PopupLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PopupLayer.h; path = ../Classes/PopupLayer.h; sourceTree = "<group>"; };
 		185DE5C81A47AE7C00EF7C5E /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene.cpp; sourceTree = "<group>"; };
 		185DE5C91A47AE7C00EF7C5E /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene.h; sourceTree = "<group>"; };
 		185DE5D01A47B36800EF7C5E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
@@ -459,9 +448,12 @@
 				18DF5E791A4D088C008C2C4A /* GetWalkPath.h */,
 				18AE16BA1A4E48200062CD78 /* PlayerController.cpp */,
 				18AE16BB1A4E48200062CD78 /* PlayerController.h */,
+<<<<<<< HEAD
 				183E5ADA1A5295B7002E6916 /* PopupLayer.cpp */,
 				183E5ADB1A5295B7002E6916 /* PopupLayer.h */,
 				18702DB41A543FEC008B58B0 /* Util.h */,
+=======
+>>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 			);
 			name = Classes;
 			path = ../classes;
@@ -578,10 +570,6 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				183E5AD21A529412002E6916 /* button_bg1.png */,
-				183E5AD31A529412002E6916 /* button_bg2.png */,
-				183E5AD41A529412002E6916 /* button_bg3.png */,
-				183E5AD51A529412002E6916 /* dialog_bg.png */,
 				183E5AD01A52840E002E6916 /* way3.png */,
 				183E5ACE1A528404002E6916 /* haidishijie3.tmx */,
 				1867AF031A52324600A83F0A /* dice.plist */,
@@ -803,7 +791,6 @@
 				1867AEFF1A519C5800A83F0A /* mark6.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
-				183E5AD91A529412002E6916 /* dialog_bg.png in Resources */,
 				1862E2741A46E51F00E41623 /* first.png in Resources */,
 				183B7C1A1A4BF5CB006D63A6 /* player1_anim.png in Resources */,
 				185DE5E61A48301300EF7C5E /* moon_item.png in Resources */,
@@ -823,7 +810,6 @@
 				183B7C1B1A4BF5CB006D63A6 /* player2_anim.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
-				183E5AD71A529412002E6916 /* button_bg2.png in Resources */,
 				183E5AD11A52840E002E6916 /* way3.png in Resources */,
 				185DE5EC1A4832FD00EF7C5E /* stage_background2.png in Resources */,
 				1867AF091A52324600A83F0A /* digital_round.plist in Resources */,
@@ -837,8 +823,6 @@
 				185DE5F91A4945F500EF7C5E /* player1.png in Resources */,
 				1867AF0A1A52324600A83F0A /* digital_round.png in Resources */,
 				1867AF081A52324600A83F0A /* dice.png in Resources */,
-				183E5AD81A529412002E6916 /* button_bg3.png in Resources */,
-				183E5AD61A529412002E6916 /* button_bg1.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				185DE5D61A47BAC500EF7C5E /* normal_menu.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
@@ -874,7 +858,6 @@
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				18DF5E7A1A4D088C008C2C4A /* GetWalkPath.cpp in Sources */,
 				185DE5CA1A47AE7C00EF7C5E /* MenuScene.cpp in Sources */,
-				183E5ADC1A5295B7002E6916 /* PopupLayer.cpp in Sources */,
 				18AE16BC1A4E48200062CD78 /* PlayerController.cpp in Sources */,
 				183B7C221A4C1E83006D63A6 /* RicherPlayer.cpp in Sources */,
 				185DE5F31A49441100EF7C5E /* GameBaseScene.cpp in Sources */,

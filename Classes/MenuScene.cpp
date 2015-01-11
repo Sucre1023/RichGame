@@ -102,9 +102,6 @@ void MenuScene::menuTouchDown(Ref *pSender, Control::EventType event)
         }
         case 10003:
         {
-            popuplayer();
-            log("退出游戏");
-            
             break;
         }
          
@@ -127,27 +124,4 @@ void MenuScene::menuTouchDown(Ref *pSender, Control::EventType event)
 
 
 
-}
-void MenuScene::popuplayer()
-{
-    PopupLayer *bg =PopupLayer::create("dialog_bg.png");
-    bg->setContentSize(Size(400, 220));
-    bg->setTitle("确认信息",20);
-    bg->setContentText("确定退出吗",20,60,250);
-    bg->setcallbackfunc(this, callfuncN_selector(MenuScene::quitbtncallfunc));
-    bg->addButton("button_bg1.png", "button_bg3.png", "确定",10005);
-    bg->addButton("button_bg2.png", "button_bg3.png", "取消",10006);
-    this->addChild(bg);
-    
-}
-void MenuScene::quitbtncallfunc(Node *p)
-{
-    if (p->getTag() ==  10005)
-    {
-        Director::getInstance()->end();
-        exit(0);
-    }else{
-    
-        return;
-    }
 }

@@ -13,9 +13,12 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include"RicherPlayer.h"
+<<<<<<< HEAD
 #include "PopupLayer.h"
 #include "Util.h"
 
+=======
+>>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 USING_NS_CC_EXT;
 USING_NS_CC;
 class GameBaseScene:public Layer
@@ -74,6 +77,7 @@ private:
     Vector<Sprite*>refresh_round_vector;//存放待刷新的数字
     int roundcount;
     
+<<<<<<< HEAD
     //加入弹出对话框
     PopupLayer *buyland;
     void buylandpopuplayer();
@@ -84,6 +88,8 @@ private:
     void showbuylandDialog(int landtag);
     
     
+=======
+>>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
     CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);
     CC_SYNTHESIZE(Label*, player_2_money, Player_2_money);
     CC_SYNTHESIZE(Label*, player_1_strength, Player_1_strnegth);
