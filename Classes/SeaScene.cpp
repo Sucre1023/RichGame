@@ -26,7 +26,7 @@ bool SeaScene::init()
 void GameBaseScene::addMap()
 {
     _map =TMXTiledMap::create("haidishijie3.tmx");
-    //_map->setPosition(0,0);
+    _map->setPosition(0,0);
     addChild(_map);
 }
 

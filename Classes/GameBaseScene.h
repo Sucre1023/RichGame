@@ -13,15 +13,7 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include"RicherPlayer.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
-#include "PopupLayer.h"
-#include "Util.h"
 
-=======
->>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
-=======
->>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 USING_NS_CC_EXT;
 USING_NS_CC;
 class GameBaseScene:public Layer
@@ -43,7 +35,7 @@ public:
     RicherPlayer *playerone;
     RicherPlayer *playertwo;
 
-   static TMXTiledMap *_map;
+    TMXTiledMap *_map;
     virtual void addMap();
     void onExit();
     void buttonpressd(Ref *p);
@@ -52,11 +44,6 @@ public:
     static Vector<Sprite*> pathMark_vector;//存放行走路径标记的容器
     void addpathMake();//添加标记
     static void drawpathcolor(std::vector<int>hangvector,std::vector<int>lievector);//绘制路径标记
-    
-    
-    //土地
-    static TMXLayer *landlayer;
-    static int blank_land_tiledID;
     
     CREATE_FUNC(GameBaseScene);
 private:
@@ -80,22 +67,7 @@ private:
     Vector<Sprite*>refresh_round_vector;//存放待刷新的数字
     int roundcount;
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-    //加入弹出对话框
-    PopupLayer *buyland;
-    void buylandpopuplayer();
-    void buylandcallback(Node *p);
     
-    //
-    float buy_land_x,buy_land_y;
-    void showbuylandDialog(int landtag);
-    
-    
-=======
->>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
-=======
->>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
     CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);
     CC_SYNTHESIZE(Label*, player_2_money, Player_2_money);
     CC_SYNTHESIZE(Label*, player_1_strength, Player_1_strnegth);
