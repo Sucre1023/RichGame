@@ -95,9 +95,23 @@ void PlayerController::endwalk()
     //走一步就把标记隐藏
     GameBaseScene::pathMark_vector.at(stepshasgone)->setVisible(false);
     stepshasgone++;
-    if (stepshasgone >= stepscount) {
-        _player->setIsmyturn(false);
-        pickonetowalk();
+    if (stepshasgone >= stepscount)
+    {
+        //
+        if (_player->getTag() == 1)
+        {
+            handleland();
+            return;
+        }
+        if (!OneRoundIsOver)
+        {
+            _player->setIsmyturn(false);
+            pickonetowalk();
+            return;
+        }
+        
+//        _player->setIsmyturn(false);
+//        pickonetowalk();
         return;
     }
     currenthang =nexthang;
@@ -124,7 +138,52 @@ void PlayerController::pickonetowalk()
         RicherPlayer *richerplayer =dynamic_cast<RicherPlayer*>(*it);
         richerplayer->setIsmyturn(true);
     }
-    NotificationCenter::getInstance()->postNotification("go_message",String::create("1"));
+    NotificationCenter::getInstance()->postNotification("go_message",String::createWithFormat("%d",1));
+}
 
-
+void PlayerController::handleland()
+{
+    OneRoundIsOver  =false;
+    float playerEndx =_lievector[stepscount]*34;
+    float playerEndy =_hangvector[stepscount] *32 +32;
+    
+    //定义二维数组,存放当前位置4个方向的坐标
+    float **four_position;
+    four_position =new float*[4];
+    for (int i=0; i<4; i++) {
+        four_position[i] =new float[2];
+        
+    }
+    
+    //up
+    four_position[0][0] =playerEndx;
+    four_position[0][1] =playerEndy +32;
+    
+    //down
+    four_position[1][0] =playerEndx;
+    four_position[1][1] =playerEndy -32;
+    
+    //left
+    four_position[2][0] =playerEndx -34;
+    four_position[2][1] =playerEndy;
+    
+    //right
+    four_position[3][0] =playerEndx +34;
+    four_position[3][1] =playerEndy;
+    
+    //遍历四个位置是否存在空地
+    for (int i =0; i<4; i++)
+    {
+        Point ptmap =Util::GLtomap(Vec2(four_position[i][0],four_position[i][1]), GameBaseScene::_map);
+        int titleId =GameBaseScene::landlayer->getTileGIDAt(ptmap);
+        if (titleId == GameBaseScene::blank_land_tiledID) {
+            float x= ptmap.x;
+            float y =ptmap.y;
+            String *str =String::createWithFormat("%d-%f-%f",2,x,y);
+            NotificationCenter::getInstance()->postNotification("buy_land_msg", str);
+            break;
+            
+        }
+    }
+    
 }

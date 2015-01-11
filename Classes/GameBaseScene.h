@@ -13,6 +13,8 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include"RicherPlayer.h"
+#include "PopupLayer.h"
+#include "Util.h"
 
 USING_NS_CC_EXT;
 USING_NS_CC;
@@ -35,7 +37,7 @@ public:
     RicherPlayer *playerone;
     RicherPlayer *playertwo;
 
-    TMXTiledMap *_map;
+   static TMXTiledMap *_map;
     virtual void addMap();
     void onExit();
     void buttonpressd(Ref *p);
@@ -44,6 +46,11 @@ public:
     static Vector<Sprite*> pathMark_vector;//存放行走路径标记的容器
     void addpathMake();//添加标记
     static void drawpathcolor(std::vector<int>hangvector,std::vector<int>lievector);//绘制路径标记
+    
+    
+    //土地
+    static TMXLayer *landlayer;
+    static int blank_land_tiledID;
     
     CREATE_FUNC(GameBaseScene);
 private:
@@ -66,6 +73,15 @@ private:
     Vector<SpriteFrame*>round_picture_vector;//存放从精灵缓存帧取出的图片
     Vector<Sprite*>refresh_round_vector;//存放待刷新的数字
     int roundcount;
+    
+    //加入弹出对话框
+    PopupLayer *buyland;
+    void buylandpopuplayer();
+    void buylandcallback(Node *p);
+    
+    //
+    float buy_land_x,buy_land_y;
+    void showbuylandDialog(int landtag);
     
     
     CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);

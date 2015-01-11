@@ -13,6 +13,9 @@ int GameBaseScene::Lie;
 bool** GameBaseScene::Shuzu;
 Vector<RicherPlayer*>GameBaseScene::players_vector;
 Vector<Sprite*>GameBaseScene::pathMark_vector;
+TMXTiledMap *GameBaseScene::_map;
+TMXLayer *GameBaseScene::landlayer;
+int GameBaseScene::blank_land_tiledID;
 
 Scene *GameBaseScene::createScene()
 {
@@ -180,7 +183,7 @@ void GameBaseScene::buttonpressd(cocos2d::Ref *p)
         log("走到了第%d行,第%d列",hangvector[i],lievector[i]);
     }
 //    log("%d",hangvector.size());
-    NotificationCenter::getInstance()->postNotification("go_message", String::create("0"));
+    NotificationCenter::getInstance()->postNotification("go_message", String::createWithFormat("%d",0));
     playerone->startgo(hangvector, lievector);
     
 
@@ -194,43 +197,58 @@ void GameBaseScene::onExit()
 void GameBaseScene::addNotificationCenter()
 {
     NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(GameBaseScene::messagereceived), "go_message", NULL);
+    NotificationCenter::getInstance()->addObserver(this, callfuncO_selector(GameBaseScene::messagereceived), "buy_land_msg",NULL);
+    
 
 }
 void GameBaseScene::messagereceived(cocos2d::Ref *data)
 {
-    int retMsgType =((String*)data)->intValue();
+    String  *srcData =(String*)data;
+    Vector<String*>message_vector =Util::splitString(srcData->getCString(), "-");
+    
+    int retMsgType =message_vector.at(0)->intValue();
     Vector<Node*> vecMenuItem = getMenu()->getChildren();
     Size winSize =Director::getInstance()->getWinSize();
-    
-    if (retMsgType ==0)
-    {
-        for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++)
+    switch (retMsgType) {
+        case 0://隐藏GO按钮
+        {
+            for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++)
         {
             Node *node =dynamic_cast<Node*>(*it);
             MoveBy *moveby =MoveBy::create(0.3f, Point((node->getContentSize().width)*3,0));
             node->runAction(moveby);
         }
-        
-        char stop[20];
-        sprintf(stop, "dice_%02d.png",randnumber);
-        diceframe->setSpriteFrame(dice_framecache->getSpriteFrameByName(stop));
-        diceframe->pause();
-    }
-    else if(retMsgType ==1)
-    {
-    
-        for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++) {
-            Node *node =dynamic_cast<Node*>(*it);
-            MoveBy *moveby =MoveBy::create(0.3f, Point(-(node->getContentSize().width)*3,0));
-            node->runAction(moveby);
+            
+            char stop[20];
+            sprintf(stop, "dice_%02d.png",randnumber);
+            diceframe->setSpriteFrame(dice_framecache->getSpriteFrameByName(stop));
+            diceframe->pause();
+            break;
         }
-        roundcount+=1;
-        refreshround();
-        diceframe->resume();
-    
+        case 1: //显示GO按钮
+        {
+            for (auto it =vecMenuItem.begin(); it!=vecMenuItem.end(); it++)
+            {
+                Node *node =dynamic_cast<Node*>(*it);
+                MoveBy *moveby =MoveBy::create(0.3f, Point(-(node->getContentSize().width)*3,0));
+                node->runAction(moveby);
+            }
+            roundcount+=1;
+            refreshround();
+            diceframe->resume();
+        }
+        case 2://购买空地
+        {
+            buy_land_x =message_vector.at(1)->floatValue();
+            buy_land_y =message_vector.at(2)->floatValue();
+            //调用showbuylandDialog，跳出弹窗
+            showbuylandDialog(2);
+            
+        
+        }
+        
     }
     
-
 }
 void GameBaseScene::addpathMake()
 {
@@ -356,5 +374,51 @@ void GameBaseScene::refreshround()
         st->setPosition(Point((visibleSie.width-90)+(i*25),visibleSie.height/10));
         st->setVisible(true);
     }
+
+}
+
+void GameBaseScene::buylandpopuplayer()
+{
+    buyland =PopupLayer::create("dialog_bg.png");
+    buyland->setTitle("购买提示");
+    buyland->setContentText("",20,60,250);
+    buyland->setcallbackfunc(this, callfuncN_selector(GameBaseScene::buylandcallback));
+    buyland->addButton("button_bg1.png", "button_bg2.png", "确定",1);
+    buyland->addButton("button_bg1.png", "button_bg2.png", "取消",0);
+    this->addChild(buyland);
+    buyland->setVisible(false);
+        
+}
+
+void GameBaseScene::buylandcallback(cocos2d::Node *p)
+{
+    if (p->getTag() == 1)
+    {
+    switch (buyland->getTag())
+    {
+        case 2:
+           // landlayer->setTileGID(uint32_t gid, <#const cocos2d::Vec2 &tileCoordinate#>)
+            break;
+            
+        default:
+            break;
+    }
+    }
+}
+void GameBaseScene::showbuylandDialog(int landtag)
+{
+  String show_msg ="";
+    switch (landtag) {
+        case 2:
+            show_msg =String::createWithFormat("你想用$ %d买下这块土地吗?",1000)->getCString();
+            break;
+        case 3:
+            show_msg =String::createWithFormat("你想用$ %d买下这块土地吗?",2000)->getCString();
+            break;
+    }
+    buyland->setTag(landtag);
+    buyland->getContentlabel()->setString(show_msg.getCString());
+    buyland->setVisible(true);
+    
 
 }

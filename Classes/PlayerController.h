@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "cocos2d.h"
 #include "RicherPlayer.h"
+#include "Util.h"
 USING_NS_CC;
 class PlayerController:public Layer
 {
@@ -40,6 +41,9 @@ private:
     RicherPlayer *_player;
     bool isAnimFinished;
     void walkonestep(RicherPlayer *player);//走一步的函数
+    
+    void handleland();//处理空地
+    bool OneRoundIsOver;
     
 };
 #endif /* defined(__RichGame__PlayerController__) */

@@ -310,6 +310,7 @@
 		1867AF041A52324600A83F0A /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
 		1867AF051A52324600A83F0A /* digital_round.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = digital_round.plist; sourceTree = "<group>"; };
 		1867AF061A52324600A83F0A /* digital_round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = digital_round.png; sourceTree = "<group>"; };
+		18702DB41A543FEC008B58B0 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		18A0E61C1A4A65300055F7A0 /* sea 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sea 2.png"; sourceTree = "<group>"; };
 		18A0E61D1A4A65300055F7A0 /* way.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = way.png; sourceTree = "<group>"; };
 		18AE16BA1A4E48200062CD78 /* PlayerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerController.cpp; path = ../Classes/PlayerController.cpp; sourceTree = "<group>"; };
@@ -460,6 +461,7 @@
 				18AE16BB1A4E48200062CD78 /* PlayerController.h */,
 				183E5ADA1A5295B7002E6916 /* PopupLayer.cpp */,
 				183E5ADB1A5295B7002E6916 /* PopupLayer.h */,
+				18702DB41A543FEC008B58B0 /* Util.h */,
 			);
 			name = Classes;
 			path = ../classes;
