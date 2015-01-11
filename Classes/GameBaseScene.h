@@ -14,9 +14,12 @@
 #include "extensions/cocos-ext.h"
 #include"RicherPlayer.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include "PopupLayer.h"
 #include "Util.h"
 
+=======
+>>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 =======
 >>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 USING_NS_CC_EXT;
@@ -78,6 +81,7 @@ private:
     int roundcount;
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     //加入弹出对话框
     PopupLayer *buyland;
     void buylandpopuplayer();
@@ -88,6 +92,8 @@ private:
     void showbuylandDialog(int landtag);
     
     
+=======
+>>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 =======
 >>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
     CC_SYNTHESIZE(Label*, player_1_money, Player_1_money);

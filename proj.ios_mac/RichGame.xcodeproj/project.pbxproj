@@ -449,9 +449,12 @@
 				18AE16BA1A4E48200062CD78 /* PlayerController.cpp */,
 				18AE16BB1A4E48200062CD78 /* PlayerController.h */,
 <<<<<<< HEAD
+<<<<<<< HEAD
 				183E5ADA1A5295B7002E6916 /* PopupLayer.cpp */,
 				183E5ADB1A5295B7002E6916 /* PopupLayer.h */,
 				18702DB41A543FEC008B58B0 /* Util.h */,
+=======
+>>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 =======
 >>>>>>> parent of 25513db... 新建popuplayer类和加入了退出游戏的弹窗
 			);
